@@ -18,23 +18,27 @@ const About = () => {
                 <span className="text-6xl font-bold text-kapil-red">K</span>
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-kapil-blue-dark to-transparent p-4">
-                <h3 className="text-xl font-bold">Kapil</h3>
-                <p className="text-sm text-muted-foreground">Web Developer & Designer</p>
+                <h3 className="text-xl font-bold">Kapil Niure</h3>
+                <p className="text-sm text-muted-foreground">Web Developer</p>
               </div>
             </div>
             
             <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Name:</span>
-                <span className="font-medium">Kapil</span>
+                <span className="font-medium">Kapil Niure</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Email:</span>
-                <span className="font-medium">hello@kapil.dev</span>
+                <span className="font-medium">kapilniure4@gmail.com</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Location:</span>
-                <span className="font-medium">Kiyose,Tokyo</span>
+                <span className="font-medium">Kiyose, Tokyo</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Experience:</span>
+                <span className="font-medium">1 Year</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Availability:</span>
@@ -53,20 +57,18 @@ const About = () => {
               
               <TabsContent value="about" className="space-y-4">
                 <p>
-                  I'm a passionate web developer and designer with over 5 years of experience 
-                  in creating beautiful, functional websites and digital experiences. My journey
-                  in web development started when I was in college, and since then I've been 
-                  constantly learning and growing in this ever-evolving field.
+                  I'm a web developer with 1 year of experience, passionate about creating 
+                  functional websites and digital experiences. My journey in web development 
+                  is just beginning, and I'm eager to learn and grow in this exciting field.
                 </p>
                 <p>
-                  I specialize in building modern, responsive websites and web applications using
-                  the latest technologies and best practices. I believe in creating websites that
-                  not only look great but also provide an exceptional user experience.
+                  I specialize in building responsive websites using modern technologies. 
+                  Although I'm still developing my skills, I'm committed to creating clean, 
+                  user-friendly web applications.
                 </p>
                 <p>
-                  When I'm not coding, you can find me exploring new design trends, contributing
-                  to open-source projects, or enjoying outdoor activities to recharge my creative
-                  energy.
+                  When I'm not coding, I enjoy exploring new technologies and looking for 
+                  opportunities to expand my skills.
                 </p>
               </TabsContent>
               
@@ -76,11 +78,11 @@ const About = () => {
                     <h3 className="text-lg font-medium mb-4">Technical Skills</h3>
                     <ul className="space-y-3">
                       {[
-                        { name: "HTML & CSS", level: 95 },
-                        { name: "JavaScript / TypeScript", level: 90 },
-                        { name: "React.js", level: 88 },
-                        { name: "Node.js", level: 82 },
-                        { name: "Next.js", level: 85 },
+                        { name: "HTML & CSS", level: 70 },
+                        { name: "JavaScript", level: 60 },
+                        { name: "React.js", level: 55 },
+                        { name: "Node.js", level: 30 },
+                        { name: "Next.js", level: 30 },
                       ].map((skill) => (
                         <li key={skill.name}>
                           <div className="flex justify-between mb-1">
@@ -102,11 +104,11 @@ const About = () => {
                     <h3 className="text-lg font-medium mb-4">Design Skills</h3>
                     <ul className="space-y-3">
                       {[
-                        { name: "UI/UX Design", level: 88 },
-                        { name: "Figma", level: 92 },
-                        { name: "Adobe XD", level: 85 },
-                        { name: "Photoshop", level: 80 },
-                        { name: "Responsive Design", level: 95 },
+                        { name: "UI/UX Design", level: 50 },
+                        { name: "Figma", level: 60 },
+                        { name: "Adobe XD", level: 40 },
+                        { name: "Photoshop", level: 30 },
+                        { name: "Responsive Design", level: 65 },
                       ].map((skill) => (
                         <li key={skill.name}>
                           <div className="flex justify-between mb-1">
@@ -130,31 +132,11 @@ const About = () => {
                 <div className="space-y-8">
                   <div className="relative border-l-2 border-kapil-red pl-6 pb-6">
                     <div className="absolute w-4 h-4 bg-kapil-red rounded-full -left-[9px] top-0" />
-                    <h3 className="text-lg font-medium">Senior Frontend Developer</h3>
-                    <p className="text-kapil-red">TechInnovate Inc. (2021 - Present)</p>
+                    <h3 className="text-lg font-medium">Junior Web Developer</h3>
+                    <p className="text-kapil-red">First Professional Role (2023 - Present)</p>
                     <p className="mt-2 text-muted-foreground">
-                      Leading frontend development for enterprise web applications.
-                      Implementing modern UI/UX designs with React, TypeScript, and Next.js.
-                    </p>
-                  </div>
-                  
-                  <div className="relative border-l-2 border-kapil-blue-light/50 pl-6 pb-6">
-                    <div className="absolute w-4 h-4 bg-kapil-blue-light/50 rounded-full -left-[9px] top-0" />
-                    <h3 className="text-lg font-medium">UI/UX Designer & Developer</h3>
-                    <p className="text-blue-400">Creative Solutions (2018 - 2021)</p>
-                    <p className="mt-2 text-muted-foreground">
-                      Designed and developed responsive websites for various clients.
-                      Created user interfaces focused on accessibility and user experience.
-                    </p>
-                  </div>
-                  
-                  <div className="relative border-l-2 border-kapil-blue-light/50 pl-6">
-                    <div className="absolute w-4 h-4 bg-kapil-blue-light/50 rounded-full -left-[9px] top-0" />
-                    <h3 className="text-lg font-medium">Web Developer Intern</h3>
-                    <p className="text-blue-400">Digital Wizards (2017 - 2018)</p>
-                    <p className="mt-2 text-muted-foreground">
-                      Assisted in developing websites and web applications.
-                      Learned the fundamentals of frontend and backend development.
+                      Developing web applications, learning modern frontend technologies, 
+                      and gaining hands-on experience in web development.
                     </p>
                   </div>
                 </div>
@@ -168,3 +150,4 @@ const About = () => {
 };
 
 export default About;
+

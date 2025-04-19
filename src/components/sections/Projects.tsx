@@ -23,8 +23,8 @@ const PROJECTS: Project[] = [
     category: "Web Development",
     image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=864",
     description: "A modern e-commerce platform with full shopping cart functionality and payment integration.",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://ecommerce-demo.lovable.dev",
+    githubUrl: "https://github.com/kapilniure/ecommerce-platform",
     tags: ["React", "Next.js", "Stripe", "Tailwind CSS"],
   },
   {
@@ -33,7 +33,7 @@ const PROJECTS: Project[] = [
     category: "UI/UX Design",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=870",
     description: "A beautiful travel agency website design with booking functionality and destination showcase.",
-    liveUrl: "#",
+    liveUrl: "https://travel-demo.lovable.dev",
     tags: ["Figma", "UI Design", "UX Research"],
   },
   {
@@ -42,8 +42,8 @@ const PROJECTS: Project[] = [
     category: "Web Development",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=870",
     description: "A comprehensive finance dashboard with data visualization and user analytics.",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://finance-demo.lovable.dev",
+    githubUrl: "https://github.com/kapilniure/finance-dashboard",
     tags: ["TypeScript", "React", "Chart.js", "Firebase"],
   },
   {
@@ -52,7 +52,7 @@ const PROJECTS: Project[] = [
     category: "Brand Identity",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=870",
     description: "Complete brand identity for a premium coffee company, including logo, packaging, and web design.",
-    liveUrl: "#",
+    liveUrl: "https://coffee-brand.lovable.dev",
     tags: ["Branding", "Logo Design", "Packaging"],
   },
   {
@@ -61,7 +61,7 @@ const PROJECTS: Project[] = [
     category: "UI/UX Design",
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=870",
     description: "User interface design for a fitness tracking application with workout plans and progress tracking.",
-    liveUrl: "#",
+    liveUrl: "https://fitness-ui.lovable.dev",
     tags: ["Mobile UI", "App Design", "User Testing"],
   },
   {
@@ -70,8 +70,8 @@ const PROJECTS: Project[] = [
     category: "Web Development",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=870",
     description: "A customizable portfolio website template for creative professionals.",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://portfolio-template.lovable.dev",
+    githubUrl: "https://github.com/kapilniure/portfolio-template",
     tags: ["HTML/CSS", "JavaScript", "Bootstrap"],
   },
 ];

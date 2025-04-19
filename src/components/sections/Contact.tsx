@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -75,7 +74,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-medium">Location</h3>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">Kiyose, Tokyo, Japan</p>
                   </div>
                 </div>
                 
@@ -86,10 +85,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium">Email</h3>
                     <a 
-                      href="mailto:hello@kapil.dev" 
+                      href="mailto:kapilniure4@gmail.com" 
                       className="text-muted-foreground hover:text-kapil-red transition-colors"
                     >
-                      hello@kapil.dev
+                      kapilniure4@gmail.com
                     </a>
                   </div>
                 </div>
@@ -101,10 +100,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium">Phone</h3>
                     <a 
-                      href="tel:+14155552671" 
+                      href="tel:+817022472273" 
                       className="text-muted-foreground hover:text-kapil-red transition-colors"
                     >
-                      +1 (415) 555-2671
+                      +81 70 2247 2273
                     </a>
                   </div>
                 </div>

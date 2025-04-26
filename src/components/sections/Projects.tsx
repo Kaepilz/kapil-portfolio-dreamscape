@@ -1,7 +1,7 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CATEGORIES = ["All", "Web Development", "UI/UX Design", "Brand Identity"];
 
@@ -124,7 +124,10 @@ const Projects = () => {
               className="animate-fade-in" 
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="group relative overflow-hidden rounded-lg bg-kapil-blue-medium border border-kapil-blue-light/20 hover:border-kapil-red transition-all duration-300">
+              <Link 
+                to={`/projects/${project.title.toLowerCase().replace(/ /g, "-")}`}
+                className="block group relative overflow-hidden rounded-lg bg-kapil-blue-medium border border-kapil-blue-light/20 hover:border-kapil-red transition-all duration-300"
+              >
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={project.image}
@@ -174,7 +177,7 @@ const Projects = () => {
                   <h3 className="text-lg font-bold">{project.title}</h3>
                   <p className="text-sm text-kapil-red">{project.category}</p>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

@@ -107,7 +107,7 @@ const TravelAgency = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0c1e36] to-kapil-blue-dark">
-      <div className="relative h-[550px] sm:h-[500px] overflow-hidden">
+      <div className="relative h-[650px] sm:h-[600px] overflow-hidden">
         {/* Hero Background */}
         <div className="absolute inset-0">
           <img 
@@ -119,7 +119,7 @@ const TravelAgency = () => {
         </div>
         
         {/* Navigation */}
-        <div className="relative container mx-auto px-4 py-6">
+        <div className="relative container mx-auto px-4 py-8">
           <div className="flex justify-between items-center">
             <Link to="/#projects">
               <Button variant="outline" className="mb-2 bg-background/20 backdrop-blur-sm hover:bg-background/30 transition-colors">
@@ -130,7 +130,7 @@ const TravelAgency = () => {
           </div>
           
           {/* Hero Content */}
-          <div className="mt-16 md:mt-24 text-center">
+          <div className="mt-20 md:mt-28 text-center">
             <motion.h1 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}

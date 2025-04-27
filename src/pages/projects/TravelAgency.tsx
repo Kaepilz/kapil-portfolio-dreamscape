@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Search, MapPin, Calendar, UserPlus, ArrowRight, Star, MapPinned } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -108,7 +107,7 @@ const TravelAgency = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0c1e36] to-kapil-blue-dark">
-      <div className="relative h-[500px] overflow-hidden">
+      <div className="relative h-[550px] sm:h-[500px] overflow-hidden">
         {/* Hero Background */}
         <div className="absolute inset-0">
           <img 
@@ -122,10 +121,10 @@ const TravelAgency = () => {
         {/* Navigation */}
         <div className="relative container mx-auto px-4 py-6">
           <div className="flex justify-between items-center">
-            <Link to="/">
+            <Link to="/#projects">
               <Button variant="outline" className="mb-2 bg-background/20 backdrop-blur-sm hover:bg-background/30 transition-colors">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Portfolio
+                Back to Projects
               </Button>
             </Link>
           </div>
@@ -149,11 +148,12 @@ const TravelAgency = () => {
               Explore the world's most beautiful places with exclusive deals and personalized travel experiences.
             </motion.p>
             
-            {/* Search Box */}
+            {/* Search Box - Increased vertical spacing */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-8"
             >
               <Card className="max-w-4xl mx-auto bg-background/20 backdrop-blur-md border-kapil-blue-light/20">
                 <CardContent className="p-6">

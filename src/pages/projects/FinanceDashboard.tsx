@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowUpRight, TrendingUp, TrendingDown, DollarSign, CreditCard, ArrowDown } from "lucide-react";
+import { ArrowLeft, TrendingUp, TrendingDown, DollarSign, CreditCard, ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -49,10 +49,10 @@ const FinanceDashboard = () => {
     <div className="min-h-screen bg-gradient-to-br from-kapil-blue-dark via-kapil-blue-medium to-kapil-blue-dark">
       <div className="container mx-auto px-4 py-6 md:py-12">
         <div className="flex justify-between items-center mb-6">
-          <Link to="/">
+          <Link to="/#projects">
             <Button variant="outline" className="mb-2">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Portfolio
+              Back to Projects
             </Button>
           </Link>
           <h1 className="text-2xl md:text-4xl font-bold text-gradient">Finance Dashboard</h1>

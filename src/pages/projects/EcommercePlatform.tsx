@@ -1,13 +1,14 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ShoppingCart, Heart, Search, Filter, ArrowDown } from "lucide-react";
+import { ArrowLeft, ShoppingCart, Heart, Search, Filter, ArrowDown, ChevronRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "@/hooks/use-toast";
+import { motion } from "framer-motion";
 
 // Sample product data
 const PRODUCTS = [
@@ -109,6 +110,7 @@ const EcommercePlatform = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [cart, setCart] = useState<{id: number, quantity: number}[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
+  const [showCartNotification, setShowCartNotification] = useState(false);
   
   // Filter products by category and search term
   const filteredProducts = PRODUCTS.filter(product => 
@@ -135,10 +137,33 @@ const EcommercePlatform = () => {
       title: "Added to cart",
       description: "Product has been added to your cart",
     });
+    
+    // Show cart notification animation
+    setShowCartNotification(true);
+    setTimeout(() => setShowCartNotification(false), 1000);
   };
   
   const toggleProductDetails = (productId: number) => {
     setSelectedProduct(selectedProduct === productId ? null : productId);
+  };
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
   };
 
   return (
@@ -146,39 +171,69 @@ const EcommercePlatform = () => {
       <div className="container mx-auto px-4 py-6 md:py-12">
         <div className="flex justify-between items-center mb-8">
           <Link to="/">
-            <Button variant="outline" className="mb-2">
+            <Button variant="outline" className="mb-2 hover:scale-105 transition-transform">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Portfolio
             </Button>
           </Link>
           <div className="flex items-center gap-3">
             <div className="relative">
-              <Button variant="outline" className="rounded-full px-3">
+              <Button variant="outline" className="rounded-full px-3 hover:scale-105 transition-transform">
                 <Heart className="h-4 w-4" />
               </Button>
             </div>
             <div className="relative">
-              <Button variant="outline" className="rounded-full px-3">
+              <Button variant="outline" className="rounded-full px-3 hover:scale-105 transition-transform">
                 <ShoppingCart className="h-4 w-4" />
                 {cartCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-kapil-red text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  <motion.span 
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="absolute -top-2 -right-2 bg-kapil-red text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                  >
                     {cartCount}
-                  </span>
+                  </motion.span>
                 )}
               </Button>
+              {showCartNotification && (
+                <motion.div
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: -10, opacity: 1 }}
+                  exit={{ y: -20, opacity: 0 }}
+                  className="absolute -top-8 right-0 bg-green-500 text-white px-2 py-1 rounded text-xs whitespace-nowrap"
+                >
+                  Item added!
+                </motion.div>
+              )}
             </div>
           </div>
         </div>
         
         <div className="mb-8">
-          <h1 className="text-2xl md:text-4xl font-bold text-gradient mb-4">E-Commerce Store</h1>
-          <p className="text-muted-foreground max-w-2xl">
+          <motion.h1 
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="text-2xl md:text-4xl font-bold text-gradient mb-4"
+          >
+            E-Commerce Store
+          </motion.h1>
+          <motion.p 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-muted-foreground max-w-2xl"
+          >
             Browse our curated collection of high-quality products, from electronics to home decor.
-          </p>
+          </motion.p>
         </div>
         
         {/* Search and Filter */}
-        <div className="flex flex-col md:flex-row gap-4 mb-6">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="flex flex-col md:flex-row gap-4 mb-6"
+        >
           <div className="relative flex-grow">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
@@ -188,94 +243,133 @@ const EcommercePlatform = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <Button variant="outline" className="flex items-center gap-2">
+          <Button variant="outline" className="flex items-center gap-2 hover:bg-kapil-blue-light/20 transition-colors">
             <Filter className="h-4 w-4" />
             Filter
             <ArrowDown className="h-3 w-3" />
           </Button>
-        </div>
+        </motion.div>
         
         {/* Categories */}
-        <div className="mb-8 overflow-x-auto">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="mb-8 overflow-x-auto"
+        >
           <div className="flex space-x-2 min-w-max p-1">
-            {CATEGORIES.map(category => (
-              <Button
+            {CATEGORIES.map((category, index) => (
+              <motion.div
                 key={category}
-                variant={activeCategory === category ? "default" : "outline"}
-                className={activeCategory === category ? "bg-kapil-red" : ""}
-                onClick={() => setActiveCategory(category)}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * index }}
               >
-                {category}
-              </Button>
+                <Button
+                  variant={activeCategory === category ? "default" : "outline"}
+                  className={`${activeCategory === category ? "bg-kapil-red" : ""} transition-all duration-300 hover:shadow-md`}
+                  onClick={() => setActiveCategory(category)}
+                >
+                  {category}
+                </Button>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
         
         {/* Featured Products */}
         {activeCategory === "All" && searchTerm === "" && (
-          <div className="mb-12">
+          <motion.div 
+            className="mb-12"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-semibold">Featured Products</h2>
-              <Button variant="link">View all</Button>
+              <h2 className="text-xl font-semibold flex items-center">
+                Featured Products
+                <span className="inline-block ml-2 bg-kapil-red/20 text-kapil-red text-xs px-2 py-0.5 rounded">HOT</span>
+              </h2>
+              <Button variant="link" className="group">
+                View all
+                <ChevronRight className="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+              </Button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {PRODUCTS.filter(p => p.isFeatured).map(product => (
-                <Card key={product.id} className="bg-kapil-blue-medium/50 overflow-hidden group transition-all duration-300 hover:border-kapil-red">
-                  <div className="aspect-square overflow-hidden relative">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                    />
-                    {product.isNew && (
-                      <Badge className="absolute top-2 left-2 bg-kapil-red">New</Badge>
-                    )}
-                    <Button 
-                      variant="outline" 
-                      size="icon" 
-                      className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-background/80"
-                      onClick={() => {}}
-                    >
-                      <Heart className="h-4 w-4" />
-                    </Button>
-                  </div>
-                  <CardContent className="p-4">
-                    <div className="flex justify-between">
-                      <div>
-                        <h3 className="font-medium text-lg">{product.name}</h3>
-                        <p className="text-muted-foreground text-sm">{product.category}</p>
+              {PRODUCTS.filter(p => p.isFeatured).map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  variants={itemVariants}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                >
+                  <Card className="bg-kapil-blue-medium/50 overflow-hidden group transition-all duration-300 hover:border-kapil-red hover:shadow-lg">
+                    <div className="aspect-square overflow-hidden relative">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
+                      />
+                      {product.isNew && (
+                        <Badge className="absolute top-2 left-2 bg-kapil-red">New</Badge>
+                      )}
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-background/80"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toast({ title: "Added to wishlist", description: `${product.name} has been added to your wishlist` });
+                        }}
+                      >
+                        <Heart className="h-4 w-4" />
+                      </Button>
+                    </div>
+                    <CardContent className="p-4">
+                      <div className="flex justify-between">
+                        <div>
+                          <h3 className="font-medium text-lg">{product.name}</h3>
+                          <p className="text-muted-foreground text-sm">{product.category}</p>
+                        </div>
+                        <p className="font-semibold">${product.price.toFixed(2)}</p>
                       </div>
-                      <p className="font-semibold">${product.price}</p>
-                    </div>
-                    <div className="flex items-center text-yellow-500 mt-1">
-                      {'★'.repeat(Math.floor(product.rating))}
-                      {'☆'.repeat(5 - Math.floor(product.rating))}
-                      <span className="ml-1 text-muted-foreground text-xs">({product.rating})</span>
-                    </div>
-                  </CardContent>
-                  <CardFooter className="p-4 pt-0 gap-2">
-                    <Button 
-                      className="w-full bg-kapil-red hover:bg-kapil-red/90"
-                      onClick={() => addToCart(product.id)}
-                    >
-                      Add to Cart
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      className="w-full"
-                      onClick={() => toggleProductDetails(product.id)}
-                    >
-                      View Details
-                    </Button>
-                  </CardFooter>
-                </Card>
+                      <div className="flex items-center text-yellow-500 mt-1">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`h-4 w-4 ${i < Math.floor(product.rating) ? "fill-yellow-500" : "fill-transparent"}`}
+                          />
+                        ))}
+                        <span className="ml-1 text-muted-foreground text-xs">({product.rating})</span>
+                      </div>
+                    </CardContent>
+                    <CardFooter className="p-4 pt-0 gap-2">
+                      <Button 
+                        className="w-full bg-kapil-red hover:bg-kapil-red/90 transition-transform hover:scale-[1.02]"
+                        onClick={() => addToCart(product.id)}
+                      >
+                        Add to Cart
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        className="w-full transition-colors hover:bg-kapil-blue-light/20"
+                        onClick={() => toggleProductDetails(product.id)}
+                      >
+                        View Details
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         )}
         
         {/* All Products */}
-        <div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
           <h2 className="text-xl font-semibold mb-4">
             {activeCategory === "All" ? "All Products" : activeCategory}
             <span className="text-sm text-muted-foreground ml-2">
@@ -284,78 +378,98 @@ const EcommercePlatform = () => {
           </h2>
           
           {filteredProducts.length === 0 ? (
-            <div className="py-12 text-center bg-kapil-blue-medium/30 rounded-lg">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="py-12 text-center bg-kapil-blue-medium/30 rounded-lg"
+            >
               <h3 className="text-lg font-medium">No products found</h3>
               <p className="text-muted-foreground mt-2">Try adjusting your filters or search term</p>
-            </div>
+            </motion.div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {filteredProducts.map(product => (
-                <Card 
-                  key={product.id} 
-                  className={`bg-kapil-blue-medium/50 overflow-hidden group transition-all duration-300 hover:border-kapil-red ${selectedProduct === product.id ? 'ring-2 ring-kapil-red' : ''}`}
+              {filteredProducts.map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  variants={itemVariants}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 >
-                  <div className="aspect-square overflow-hidden relative">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                    />
-                    {product.isNew && (
-                      <Badge className="absolute top-2 left-2 bg-kapil-red">New</Badge>
+                  <Card 
+                    className={`bg-kapil-blue-medium/50 overflow-hidden group transition-all duration-300 hover:border-kapil-red hover:shadow-lg ${selectedProduct === product.id ? 'ring-2 ring-kapil-red' : ''}`}
+                  >
+                    <div className="aspect-square overflow-hidden relative">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
+                      />
+                      {product.isNew && (
+                        <Badge className="absolute top-2 left-2 bg-kapil-red">New</Badge>
+                      )}
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-background/80"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toast({ title: "Added to wishlist", description: `${product.name} has been added to your wishlist` });
+                        }}
+                      >
+                        <Heart className="h-4 w-4" />
+                      </Button>
+                    </div>
+                    <CardContent className="p-4">
+                      <div className="flex justify-between">
+                        <div>
+                          <h3 className="font-medium">{product.name}</h3>
+                          <p className="text-muted-foreground text-xs">{product.category}</p>
+                        </div>
+                        <p className="font-semibold">${product.price.toFixed(2)}</p>
+                      </div>
+                      <div className="flex items-center text-yellow-500 mt-1 text-sm">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`h-3 w-3 ${i < Math.floor(product.rating) ? "fill-yellow-500" : "fill-transparent"}`}
+                          />
+                        ))}
+                        <span className="ml-1 text-muted-foreground text-xs">({product.rating})</span>
+                      </div>
+                    </CardContent>
+                    <CardFooter className="p-4 pt-0">
+                      <Button 
+                        className="w-full bg-kapil-red hover:bg-kapil-red/90 transition-transform hover:scale-[1.02]"
+                        onClick={() => addToCart(product.id)}
+                      >
+                        Add to Cart
+                      </Button>
+                    </CardFooter>
+                    
+                    {selectedProduct === product.id && (
+                      <motion.div 
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        className="p-4 bg-kapil-blue-dark/60 border-t border-kapil-blue-light/20"
+                      >
+                        <p className="text-sm mb-3">{product.description}</p>
+                        <div className="grid grid-cols-2 gap-2 text-xs">
+                          <div className="flex items-center">
+                            <span className="w-3 h-3 rounded-full bg-green-500 mr-2"></span>
+                            In Stock
+                          </div>
+                          <div className="flex items-center">
+                            <span className="w-3 h-3 rounded-full bg-blue-500 mr-2"></span>
+                            Free Shipping
+                          </div>
+                        </div>
+                      </motion.div>
                     )}
-                    <Button 
-                      variant="outline" 
-                      size="icon" 
-                      className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-background/80"
-                      onClick={() => {}}
-                    >
-                      <Heart className="h-4 w-4" />
-                    </Button>
-                  </div>
-                  <CardContent className="p-4">
-                    <div className="flex justify-between">
-                      <div>
-                        <h3 className="font-medium">{product.name}</h3>
-                        <p className="text-muted-foreground text-xs">{product.category}</p>
-                      </div>
-                      <p className="font-semibold">${product.price}</p>
-                    </div>
-                    <div className="flex items-center text-yellow-500 mt-1 text-sm">
-                      {'★'.repeat(Math.floor(product.rating))}
-                      {'☆'.repeat(5 - Math.floor(product.rating))}
-                      <span className="ml-1 text-muted-foreground text-xs">({product.rating})</span>
-                    </div>
-                  </CardContent>
-                  <CardFooter className="p-4 pt-0">
-                    <Button 
-                      className="w-full bg-kapil-red hover:bg-kapil-red/90"
-                      onClick={() => addToCart(product.id)}
-                    >
-                      Add to Cart
-                    </Button>
-                  </CardFooter>
-                  
-                  {selectedProduct === product.id && (
-                    <div className="p-4 bg-kapil-blue-dark/60 border-t border-kapil-blue-light/20">
-                      <p className="text-sm mb-3">{product.description}</p>
-                      <div className="grid grid-cols-2 gap-2 text-xs">
-                        <div className="flex items-center">
-                          <span className="w-3 h-3 rounded-full bg-green-500 mr-2"></span>
-                          In Stock
-                        </div>
-                        <div className="flex items-center">
-                          <span className="w-3 h-3 rounded-full bg-blue-500 mr-2"></span>
-                          Free Shipping
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </Card>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

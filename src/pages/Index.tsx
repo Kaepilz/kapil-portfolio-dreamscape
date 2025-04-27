@@ -13,6 +13,15 @@ const Index = () => {
     // Update document title
     document.title = "Kapil - Web Developer & Designer";
     
+    // Check if there's a hash in the URL and scroll to that section
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {

@@ -112,10 +112,10 @@ const PortfolioTemplate = () => {
     <div className="min-h-screen bg-gradient-to-br from-kapil-blue-dark via-kapil-blue-medium to-kapil-blue-dark">
       <div className="container mx-auto px-4 py-12">
         <div className="flex justify-between items-center mb-8">
-          <Link to="/">
+          <Link to="/#projects">
             <Button variant="outline" className="mb-2">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Portfolio
+              Back to Projects
             </Button>
           </Link>
           

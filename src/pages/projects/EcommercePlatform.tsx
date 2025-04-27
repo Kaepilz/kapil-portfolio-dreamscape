@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ShoppingCart, Heart, Search, Filter, ArrowDown, ChevronRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -170,10 +169,10 @@ const EcommercePlatform = () => {
     <div className="min-h-screen bg-gradient-to-b from-kapil-blue-dark to-kapil-blue-medium">
       <div className="container mx-auto px-4 py-6 md:py-12">
         <div className="flex justify-between items-center mb-8">
-          <Link to="/">
+          <Link to="/#projects">
             <Button variant="outline" className="mb-2 hover:scale-105 transition-transform">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Portfolio
+              Back to Projects
             </Button>
           </Link>
           <div className="flex items-center gap-3">

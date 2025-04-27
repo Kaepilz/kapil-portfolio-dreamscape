@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, TrendingUp, TrendingDown, DollarSign, CreditCard, ArrowDown } from "lucide-react";
+import { ArrowLeft, TrendingUp, TrendingDown, DollarSign, CreditCard, ArrowDown, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

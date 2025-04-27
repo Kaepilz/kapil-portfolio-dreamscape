@@ -180,46 +180,48 @@ const PortfolioTemplate = () => {
                 </Tabs>
               </div>
               
-              <TabsContent value="preview">
-                <div className={`
-                  overflow-hidden rounded-md border border-kapil-blue-light/20 bg-background
-                  ${activeDevice === "desktop" ? "w-full h-[400px]" : ""}
-                  ${activeDevice === "tablet" ? "w-[768px] h-[400px] mx-auto" : ""}
-                  ${activeDevice === "mobile" ? "w-[375px] h-[600px] mx-auto" : ""}
-                `}>
-                  <iframe
-                    src="https://portfolio-template-demo.web.app"
-                    title="Portfolio Template Preview"
-                    className="w-full h-full"
-                  />
-                </div>
-              </TabsContent>
-              
-              <TabsContent value="code">
-                <div className="relative">
-                  <pre className="bg-kapil-blue-dark/80 p-4 rounded-md overflow-x-auto text-sm">
-                    <code className="text-white">{CODE_SNIPPET}</code>
-                  </pre>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="absolute top-2 right-2"
-                    onClick={handleCopyCode}
-                  >
-                    {!copied ? (
-                      <>
-                        <Copy className="h-4 w-4 mr-2" />
-                        Copy
-                      </>
-                    ) : (
-                      <>
-                        <Check className="h-4 w-4 mr-2" />
-                        Copied!
-                      </>
-                    )}
-                  </Button>
-                </div>
-              </TabsContent>
+              <Tabs value={activeTab} onValueChange={setActiveTab} defaultValue="preview">
+                <TabsContent value="preview">
+                  <div className={`
+                    overflow-hidden rounded-md border border-kapil-blue-light/20 bg-background
+                    ${activeDevice === "desktop" ? "w-full h-[400px]" : ""}
+                    ${activeDevice === "tablet" ? "w-[768px] h-[400px] mx-auto" : ""}
+                    ${activeDevice === "mobile" ? "w-[375px] h-[600px] mx-auto" : ""}
+                  `}>
+                    <iframe
+                      src="https://portfolio-template-demo.web.app"
+                      title="Portfolio Template Preview"
+                      className="w-full h-full"
+                    />
+                  </div>
+                </TabsContent>
+                
+                <TabsContent value="code">
+                  <div className="relative">
+                    <pre className="bg-kapil-blue-dark/80 p-4 rounded-md overflow-x-auto text-sm">
+                      <code className="text-white">{CODE_SNIPPET}</code>
+                    </pre>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="absolute top-2 right-2"
+                      onClick={handleCopyCode}
+                    >
+                      {!copied ? (
+                        <>
+                          <Copy className="h-4 w-4 mr-2" />
+                          Copy
+                        </>
+                      ) : (
+                        <>
+                          <Check className="h-4 w-4 mr-2" />
+                          Copied!
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                </TabsContent>
+              </Tabs>
             </div>
           </div>
           

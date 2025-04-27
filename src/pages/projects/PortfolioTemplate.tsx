@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Download, Copy, Check, Laptop, Tablet, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -163,25 +162,25 @@ const PortfolioTemplate = () => {
                   </Button>
                 </div>
                 
-                <TabsList>
-                  <TabsTrigger 
-                    value="preview" 
-                    onClick={() => setActiveTab("preview")}
-                    className={activeTab === "preview" ? "bg-kapil-red" : ""}
-                  >
-                    Preview
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="code" 
-                    onClick={() => setActiveTab("code")}
-                    className={activeTab === "code" ? "bg-kapil-red" : ""}
-                  >
-                    Code
-                  </TabsTrigger>
-                </TabsList>
+                <Tabs value={activeTab} onValueChange={setActiveTab} defaultValue="preview">
+                  <TabsList>
+                    <TabsTrigger 
+                      value="preview" 
+                      className={activeTab === "preview" ? "bg-kapil-red" : ""}
+                    >
+                      Preview
+                    </TabsTrigger>
+                    <TabsTrigger 
+                      value="code" 
+                      className={activeTab === "code" ? "bg-kapil-red" : ""}
+                    >
+                      Code
+                    </TabsTrigger>
+                  </TabsList>
+                </Tabs>
               </div>
               
-              {activeTab === "preview" ? (
+              <TabsContent value="preview">
                 <div className={`
                   overflow-hidden rounded-md border border-kapil-blue-light/20 bg-background
                   ${activeDevice === "desktop" ? "w-full h-[400px]" : ""}
@@ -194,7 +193,9 @@ const PortfolioTemplate = () => {
                     className="w-full h-full"
                   />
                 </div>
-              ) : (
+              </TabsContent>
+              
+              <TabsContent value="code">
                 <div className="relative">
                   <pre className="bg-kapil-blue-dark/80 p-4 rounded-md overflow-x-auto text-sm">
                     <code className="text-white">{CODE_SNIPPET}</code>
@@ -218,7 +219,7 @@ const PortfolioTemplate = () => {
                     )}
                   </Button>
                 </div>
-              )}
+              </TabsContent>
             </div>
           </div>
           

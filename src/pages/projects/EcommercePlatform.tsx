@@ -1,11 +1,20 @@
+
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ShoppingCart, Heart, Search, Filter, ArrowDown, ChevronRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import { 
+  ShoppingCart, 
+  Heart, 
+  Search,
+  Filter,
+  ArrowDown,
+  ArrowLeft,
+  ChevronRight,
+  Star
+} from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 

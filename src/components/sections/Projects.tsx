@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
@@ -127,6 +128,7 @@ const Projects = () => {
               <Link 
                 to={`/projects/${project.title.toLowerCase().replace(/ /g, "-")}`}
                 className="block group relative overflow-hidden rounded-lg bg-kapil-blue-medium border border-kapil-blue-light/20 hover:border-kapil-red transition-all duration-300"
+                onClick={() => window.scrollTo(0, 0)}
               >
                 <div className="aspect-video overflow-hidden">
                   <img

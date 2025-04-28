@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, ScrollRestoration } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import EcommercePlatform from "./pages/projects/EcommercePlatform";
@@ -15,15 +15,29 @@ import FitnessApp from "./pages/projects/FitnessApp";
 
 const queryClient = new QueryClient();
 
+// ScrollToTop component to handle scrolling to top on navigation
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
+        <ScrollRestoration />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects/ecommerce-platform" element={<EcommercePlatform />} />
+          <Route path="/projects/e-commerce-platform" element={<EcommercePlatform />} />
           <Route path="/projects/finance-dashboard" element={<FinanceDashboard />} />
           <Route path="/projects/portfolio-website-template" element={<PortfolioTemplate />} />
           <Route path="/projects/travel-agency-website" element={<TravelAgency />} />

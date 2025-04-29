@@ -14,8 +14,11 @@ const About = () => {
           <div className="md:col-span-5 lg:col-span-4">
             <div className="relative rounded-lg overflow-hidden mb-6 animate-fade-in">
               <div className="aspect-[3/4] bg-kapil-blue-medium rounded-lg flex items-center justify-center">
-                {/* Placeholder for profile picture */}
-                <span className="text-6xl font-bold text-kapil-red">K</span>
+                <img 
+                  src="https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w481-h641-s-no-gm?authuser=0" 
+                  alt="Kapil Niure" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-kapil-blue-dark to-transparent p-4">
                 <h3 className="text-xl font-bold">Kapil Niure</h3>

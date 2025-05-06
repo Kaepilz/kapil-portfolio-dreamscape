@@ -81,11 +81,11 @@ const About = () => {
                     <h3 className="text-lg font-medium mb-4">Web Skills</h3>
                     <ul className="space-y-3">
                       {[
-                        { name: "HTML & CSS Basics", level: 60 },
-                        { name: "Website Layout", level: 55 },
-                        { name: "Web Design Principles", level: 50 },
-                        { name: "Color Theory", level: 45 },
-                        { name: "Digital Graphics", level: 40 },
+                        { name: "HTML & CSS Basics", level: 35 },
+                        { name: "Website Layout", level: 30 },
+                        { name: "Web Design Principles", level: 25 },
+                        { name: "Color Theory", level: 20 },
+                        { name: "Digital Graphics", level: 15 },
                       ].map((skill) => (
                         <li key={skill.name}>
                           <div className="flex justify-between mb-1">
@@ -107,11 +107,11 @@ const About = () => {
                     <h3 className="text-lg font-medium mb-4">Creative Skills</h3>
                     <ul className="space-y-3">
                       {[
-                        { name: "Visual Design", level: 55 },
-                        { name: "Basic Image Editing", level: 50 },
-                        { name: "Content Creation", level: 45 },
-                        { name: "Typography", level: 40 },
-                        { name: "Responsive Design", level: 35 },
+                        { name: "Visual Design", level: 30 },
+                        { name: "Basic Image Editing", level: 25 },
+                        { name: "Content Creation", level: 20 },
+                        { name: "Typography", level: 15 },
+                        { name: "Responsive Design", level: 10 },
                       ].map((skill) => (
                         <li key={skill.name}>
                           <div className="flex justify-between mb-1">

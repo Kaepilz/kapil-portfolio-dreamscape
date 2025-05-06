@@ -22,7 +22,7 @@ const About = () => {
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-kapil-blue-dark to-transparent p-4">
                 <h3 className="text-xl font-bold">Kapil Niure</h3>
-                <p className="text-sm text-muted-foreground">Web Developer</p>
+                <p className="text-sm text-muted-foreground">Web Design Enthusiast</p>
               </div>
             </div>
             
@@ -40,12 +40,12 @@ const About = () => {
                 <span className="font-medium">Kiyose, Tokyo</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Experience:</span>
-                <span className="font-medium">1 Year</span>
+                <span className="text-muted-foreground">Interests:</span>
+                <span className="font-medium">Web Design, Digital Art</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Availability:</span>
-                <span className="font-medium text-green-500">Open to Work</span>
+                <span className="font-medium text-green-500">Open to Opportunities</span>
               </div>
             </div>
           </div>
@@ -55,37 +55,37 @@ const About = () => {
               <TabsList className="grid grid-cols-3 mb-8">
                 <TabsTrigger value="about">About Me</TabsTrigger>
                 <TabsTrigger value="skills">Skills</TabsTrigger>
-                <TabsTrigger value="experience">Experience</TabsTrigger>
+                <TabsTrigger value="experience">Background</TabsTrigger>
               </TabsList>
               
               <TabsContent value="about" className="space-y-4">
                 <p>
-                  I'm a web developer with 1 year of experience, passionate about creating 
-                  functional websites and digital experiences. My journey in web development 
-                  is just beginning, and I'm eager to learn and grow in this exciting field.
+                  I'm a creative and enthusiastic web design enthusiast with a passion for learning
+                  how to create beautiful, user-friendly websites. I'm at the beginning of my journey
+                  in web design and development, and I'm eager to grow my skills in this exciting field.
                 </p>
                 <p>
-                  I specialize in building responsive websites using modern technologies. 
-                  Although I'm still developing my skills, I'm committed to creating clean, 
-                  user-friendly web applications.
+                  I focus on understanding the basics of website creation, including layout design, 
+                  color theory, and user experience. I enjoy working on simple projects that help me
+                  build my knowledge step by step.
                 </p>
                 <p>
-                  When I'm not coding, I enjoy exploring new technologies and looking for 
-                  opportunities to expand my skills.
+                  When I'm not exploring web design, I enjoy learning about digital art and finding
+                  inspiration in everyday life that I can incorporate into my creative work.
                 </p>
               </TabsContent>
               
               <TabsContent value="skills">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-lg font-medium mb-4">Technical Skills</h3>
+                    <h3 className="text-lg font-medium mb-4">Web Skills</h3>
                     <ul className="space-y-3">
                       {[
-                        { name: "HTML & CSS", level: 70 },
-                        { name: "JavaScript", level: 60 },
-                        { name: "React.js", level: 55 },
-                        { name: "Node.js", level: 30 },
-                        { name: "Next.js", level: 30 },
+                        { name: "HTML & CSS Basics", level: 60 },
+                        { name: "Website Layout", level: 55 },
+                        { name: "Web Design Principles", level: 50 },
+                        { name: "Color Theory", level: 45 },
+                        { name: "Digital Graphics", level: 40 },
                       ].map((skill) => (
                         <li key={skill.name}>
                           <div className="flex justify-between mb-1">
@@ -104,14 +104,14 @@ const About = () => {
                   </div>
                   
                   <div>
-                    <h3 className="text-lg font-medium mb-4">Design Skills</h3>
+                    <h3 className="text-lg font-medium mb-4">Creative Skills</h3>
                     <ul className="space-y-3">
                       {[
-                        { name: "UI/UX Design", level: 50 },
-                        { name: "Figma", level: 60 },
-                        { name: "Adobe XD", level: 40 },
-                        { name: "Photoshop", level: 30 },
-                        { name: "Responsive Design", level: 65 },
+                        { name: "Visual Design", level: 55 },
+                        { name: "Basic Image Editing", level: 50 },
+                        { name: "Content Creation", level: 45 },
+                        { name: "Typography", level: 40 },
+                        { name: "Responsive Design", level: 35 },
                       ].map((skill) => (
                         <li key={skill.name}>
                           <div className="flex justify-between mb-1">
@@ -135,11 +135,23 @@ const About = () => {
                 <div className="space-y-8">
                   <div className="relative border-l-2 border-kapil-red pl-6 pb-6">
                     <div className="absolute w-4 h-4 bg-kapil-red rounded-full -left-[9px] top-0" />
-                    <h3 className="text-lg font-medium">Junior Web Developer</h3>
-                    <p className="text-kapil-red">First Professional Role (2023 - Present)</p>
+                    <h3 className="text-lg font-medium">Self-Taught Learning Journey</h3>
+                    <p className="text-kapil-red">Ongoing</p>
                     <p className="mt-2 text-muted-foreground">
-                      Developing web applications, learning modern frontend technologies, 
-                      and gaining hands-on experience in web development.
+                      Teaching myself web design fundamentals through online resources, practicing 
+                      with small projects, and developing a better understanding of creating visually 
+                      appealing websites.
+                    </p>
+                  </div>
+                  
+                  <div className="relative border-l-2 border-kapil-red pl-6 pb-6">
+                    <div className="absolute w-4 h-4 bg-kapil-red rounded-full -left-[9px] top-0" />
+                    <h3 className="text-lg font-medium">Personal Projects</h3>
+                    <p className="text-kapil-red">Building Portfolio</p>
+                    <p className="mt-2 text-muted-foreground">
+                      Working on personal design projects to improve my skills, demonstrate my 
+                      dedication and work ethic, and build a portfolio that showcases my growth 
+                      and creativity.
                     </p>
                   </div>
                 </div>
@@ -153,4 +165,3 @@ const About = () => {
 };
 
 export default About;
-

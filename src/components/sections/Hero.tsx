@@ -59,16 +59,14 @@ const Hero = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-kapil-blue-medium p-2 rounded-full">
                   <div className="relative w-60 h-60 md:w-72 md:h-72 lg:w-88 lg:h-88 rounded-full overflow-hidden border-4 border-kapil-blue-dark">
-                    <img 
-                      src="https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w481-h641-s-no-gm?authuser=0" 
-                      alt="Kapil Niure" 
-                      className="object-cover w-full h-full"
-                      onError={(e) => {
-                        console.error("Image failed to load");
-                        // Provide a backup image if the main one fails
-                        e.currentTarget.src = "/placeholder.svg";
-                      }}
-                    />
+                    <Avatar className="w-full h-full">
+                      <AvatarImage 
+                        src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop" 
+                        alt="Kapil Niure" 
+                        className="object-cover w-full h-full"
+                      />
+                      <AvatarFallback className="bg-kapil-blue-light text-4xl">KN</AvatarFallback>
+                    </Avatar>
                   </div>
                 </div>
               </div>

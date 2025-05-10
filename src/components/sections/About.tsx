@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -15,15 +14,14 @@ const About = () => {
           <div className="md:col-span-5 lg:col-span-4">
             <div className="relative rounded-lg overflow-hidden mb-6 animate-fade-in">
               <div className="aspect-[3/4] bg-kapil-blue-medium rounded-lg flex items-center justify-center">
-                <img 
-                  src="/kapil-profile.jpg" 
-                  alt="Kapil Niure" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    console.error("Image failed to load");
-                    e.currentTarget.src = "https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w481-h641-s-no-gm?authuser=0";
-                  }}
-                />
+                <Avatar className="w-full h-full rounded-none">
+                  <AvatarImage 
+                    src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop" 
+                    alt="Kapil Niure" 
+                    className="w-full h-full object-cover"
+                  />
+                  <AvatarFallback className="bg-kapil-blue-light text-4xl w-full h-full">KN</AvatarFallback>
+                </Avatar>
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-kapil-blue-dark to-transparent p-4">
                 <h3 className="text-xl font-bold">Kapil Niure</h3>

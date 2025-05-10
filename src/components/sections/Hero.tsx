@@ -61,7 +61,7 @@ const Hero = () => {
                   <div className="relative w-60 h-60 md:w-72 md:h-72 lg:w-88 lg:h-88 rounded-full overflow-hidden border-4 border-kapil-blue-dark">
                     <Avatar className="w-full h-full">
                       <AvatarImage 
-                        src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop" 
+                        src="/profile.jpg"
                         alt="Kapil Niure" 
                         className="object-cover w-full h-full"
                       />

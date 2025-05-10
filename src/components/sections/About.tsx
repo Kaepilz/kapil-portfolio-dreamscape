@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -16,7 +17,7 @@ const About = () => {
               <div className="aspect-[3/4] bg-kapil-blue-medium rounded-lg flex items-center justify-center">
                 <Avatar className="w-full h-full rounded-none">
                   <AvatarImage 
-                    src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop" 
+                    src="/profile.jpg"
                     alt="Kapil Niure" 
                     className="w-full h-full object-cover"
                   />

@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
@@ -62,6 +63,11 @@ const Hero = () => {
                       src="https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w481-h641-s-no-gm?authuser=0" 
                       alt="Kapil Niure" 
                       className="object-cover w-full h-full"
+                      onError={(e) => {
+                        console.error("Image failed to load");
+                        // Provide a backup image if the main one fails
+                        e.currentTarget.src = "/placeholder.svg";
+                      }}
                     />
                   </div>
                 </div>

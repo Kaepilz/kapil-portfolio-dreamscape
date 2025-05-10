@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
@@ -15,9 +16,13 @@ const About = () => {
             <div className="relative rounded-lg overflow-hidden mb-6 animate-fade-in">
               <div className="aspect-[3/4] bg-kapil-blue-medium rounded-lg flex items-center justify-center">
                 <img 
-                  src="https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w481-h641-s-no-gm?authuser=0" 
+                  src="/kapil-profile.jpg" 
                   alt="Kapil Niure" 
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    console.error("Image failed to load");
+                    e.currentTarget.src = "https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w481-h641-s-no-gm?authuser=0";
+                  }}
                 />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-kapil-blue-dark to-transparent p-4">

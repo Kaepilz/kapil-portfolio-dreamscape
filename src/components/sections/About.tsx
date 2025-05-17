@@ -19,6 +19,7 @@ const About = () => {
                     src="https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w809-h1079-s-no-gm?authuser=0" 
                     alt="Kapil Niure" 
                     className="w-full h-full object-cover"
+                    crossOrigin="anonymous"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.onerror = null; // Prevent infinite error loop

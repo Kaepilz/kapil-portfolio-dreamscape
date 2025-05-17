@@ -1,7 +1,6 @@
 
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
@@ -15,17 +14,18 @@ const About = () => {
           <div className="md:col-span-5 lg:col-span-4">
             <div className="relative rounded-lg overflow-hidden mb-6 animate-fade-in">
               <div className="aspect-[3/4] bg-kapil-blue-medium rounded-lg flex items-center justify-center">
-                <Avatar className="w-full h-full rounded-none">
-                  <AvatarImage 
+                <div className="w-full h-full">
+                  <img 
                     src="https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w809-h1079-s-no-gm?authuser=0" 
                     alt="Kapil Niure" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      e.currentTarget.src = "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop";
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null; // Prevent infinite error loop
+                      target.src = "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop";
                     }}
                   />
-                  <AvatarFallback className="bg-kapil-blue-light text-4xl w-full h-full">KN</AvatarFallback>
-                </Avatar>
+                </div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-kapil-blue-dark to-transparent p-4">
                 <h3 className="text-xl font-bold">Kapil Niure</h3>

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
@@ -93,6 +92,7 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-kapil-blue-medium/20">
       <div className="container mx-auto">
         <h2 className="section-title">My Projects</h2>
+        <style>{`.section-title { opacity: 0; transform: translateY(30px); animation: fadeInUp 1s forwards; } @keyframes fadeInUp { to { opacity: 1; transform: none; } }`}</style>
         <p className="text-muted-foreground max-w-2xl mb-12">
           Check out some of my recent projects. Each project represents my dedication to 
           creating beautiful and functional digital experiences.
@@ -127,7 +127,7 @@ const Projects = () => {
             >
               <Link 
                 to={`/projects/${project.title.toLowerCase().replace(/ /g, "-")}`}
-                className="block group relative overflow-hidden rounded-lg bg-kapil-blue-medium border border-kapil-blue-light/20 hover:border-kapil-red transition-all duration-300"
+                className="block group relative overflow-hidden rounded-lg bg-kapil-blue-medium border border-kapil-blue-light/20 hover:border-kapil-red hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 <div className="aspect-video overflow-hidden">

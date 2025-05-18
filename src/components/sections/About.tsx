@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -15,7 +14,7 @@ const About = () => {
             <div className="relative rounded-lg overflow-hidden mb-6 animate-fade-in">
               <div className="aspect-[3/4] bg-kapil-blue-medium rounded-lg flex items-center justify-center">
                 <img 
-                  src="https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w481-h641-s-no-gm?authuser=0" 
+                  src="/images/profile.jpg" 
                   alt="Kapil Niure" 
                   className="w-full h-full object-cover"
                 />
@@ -46,6 +45,10 @@ const About = () => {
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Availability:</span>
                 <span className="font-medium text-green-500">Open to Work</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Languages:</span>
+                <span className="font-medium">English (fluent), Nepali (native), Japanese (conversational)</span>
               </div>
             </div>
           </div>

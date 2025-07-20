@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MotionWrapper } from "@/components/MotionWrapper";
-import { SkillsSection } from "@/components/SkillsSection";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -10,12 +8,16 @@ const About = () => {
   return (
     <section id="about" className="section-padding bg-secondary/20">
       <div className="container mx-auto">
-        <MotionWrapper>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
           <h2 className="section-title">About Me</h2>
-        </MotionWrapper>
+        </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mt-12">
-          <MotionWrapper delay={0.2} className="md:col-span-5 lg:col-span-4">
+          <motion.div className="md:col-span-5 lg:col-span-4" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <div className="relative rounded-lg overflow-hidden mb-6">
               <div className="aspect-[3/4] bg-secondary rounded-lg flex items-center justify-center">
                 <img 
@@ -30,7 +32,7 @@ const About = () => {
               </div>
             </div>
             
-            <MotionWrapper delay={0.4} className="space-y-4">
+            <div className="space-y-4">
               {[
                 { label: "Name", value: "Kapil Niure" },
                 { label: "Email", value: "kapilniure4@gmail.com" },
@@ -53,10 +55,10 @@ const About = () => {
                   </span>
                 </motion.div>
               ))}
-            </MotionWrapper>
-          </MotionWrapper>
+            </div>
+          </motion.div>
           
-          <MotionWrapper delay={0.3} className="md:col-span-7 lg:col-span-8">
+          <motion.div className="md:col-span-7 lg:col-span-8" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <Tabs defaultValue="about" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="grid grid-cols-3 mb-8">
                 <TabsTrigger value="about">About Me</TabsTrigger>
@@ -65,34 +67,30 @@ const About = () => {
               </TabsList>
               
               <TabsContent value="about" className="space-y-4">
-                <MotionWrapper>
-                  <p>
-                    I'm a web developer with 1 year of experience, passionate about creating 
-                    functional websites and digital experiences. My journey in web development 
-                    is just beginning, and I'm eager to learn and grow in this exciting field.
-                  </p>
-                </MotionWrapper>
-                <MotionWrapper delay={0.2}>
-                  <p>
-                    I specialize in building responsive websites using modern technologies. 
-                    Although I'm still developing my skills, I'm committed to creating clean, 
-                    user-friendly web applications.
-                  </p>
-                </MotionWrapper>
-                <MotionWrapper delay={0.4}>
-                  <p>
-                    When I'm not coding, I enjoy exploring new technologies and looking for 
-                    opportunities to expand my skills.
-                  </p>
-                </MotionWrapper>
+                <p>
+                  I'm a web developer with 1 year of experience, passionate about creating 
+                  functional websites and digital experiences. My journey in web development 
+                  is just beginning, and I'm eager to learn and grow in this exciting field.
+                </p>
+                <p>
+                  I specialize in building responsive websites using modern technologies. 
+                  Although I'm still developing my skills, I'm committed to creating clean, 
+                  user-friendly web applications.
+                </p>
+                <p>
+                  When I'm not coding, I enjoy exploring new technologies and looking for 
+                  opportunities to expand my skills.
+                </p>
               </TabsContent>
               
               <TabsContent value="skills">
-                <SkillsSection />
+                <div className="text-center py-8">
+                  <p className="text-muted-foreground">Skills section integrated into main portfolio</p>
+                </div>
               </TabsContent>
               
               <TabsContent value="experience">
-                <MotionWrapper className="space-y-8">
+                <div className="space-y-8">
                   <motion.div 
                     className="relative border-l-2 border-primary pl-6 pb-6"
                     initial={{ opacity: 0, x: -50 }}
@@ -113,10 +111,10 @@ const About = () => {
                       and gaining hands-on experience in web development.
                     </p>
                   </motion.div>
-                </MotionWrapper>
+                </div>
               </TabsContent>
             </Tabs>
-          </MotionWrapper>
+          </motion.div>
         </div>
       </div>
     </section>

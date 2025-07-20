@@ -96,6 +96,35 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/70;
+  }
+
+  /* Hide cursor on desktop for custom cursor */
+  @media (min-width: 768px) {
+    * {
+      cursor: none !important;
+    }
+    
+    a, button, [role="button"], input, textarea, select {
+      cursor: none !important;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

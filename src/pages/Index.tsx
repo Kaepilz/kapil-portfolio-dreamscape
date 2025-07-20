@@ -7,6 +7,8 @@ import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
+import { ModeToggle } from "@/components/ModeToggle";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 const Index = () => {
   useEffect(() => {
@@ -69,7 +71,9 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
+      <AnimatedBackground />
+      <ModeToggle />
       <Navbar />
       <main className="flex-grow">
         <Hero />

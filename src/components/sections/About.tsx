@@ -1,59 +1,62 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { MotionWrapper } from "@/components/MotionWrapper";
+import { SkillsSection } from "@/components/SkillsSection";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
   
   return (
-    <section id="about" className="section-padding bg-kapil-blue-medium/20">
+    <section id="about" className="section-padding bg-secondary/20">
       <div className="container mx-auto">
-        <h2 className="section-title">About Me</h2>
+        <MotionWrapper>
+          <h2 className="section-title">About Me</h2>
+        </MotionWrapper>
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mt-12">
-          <div className="md:col-span-5 lg:col-span-4">
-            <div className="relative rounded-lg overflow-hidden mb-6 animate-fade-in">
-              <div className="aspect-[3/4] bg-kapil-blue-medium rounded-lg flex items-center justify-center">
+          <MotionWrapper delay={0.2} className="md:col-span-5 lg:col-span-4">
+            <div className="relative rounded-lg overflow-hidden mb-6">
+              <div className="aspect-[3/4] bg-secondary rounded-lg flex items-center justify-center">
                 <img 
                   src="/images/profile.jpg" 
                   alt="Kapil Niure" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-kapil-blue-dark to-transparent p-4">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-4">
                 <h3 className="text-xl font-bold">Kapil Niure</h3>
                 <p className="text-sm text-muted-foreground">Web Developer</p>
               </div>
             </div>
             
-            <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Name:</span>
-                <span className="font-medium">Kapil Niure</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Email:</span>
-                <span className="font-medium">kapilniure4@gmail.com</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Location:</span>
-                <span className="font-medium">Kiyose, Tokyo</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Experience:</span>
-                <span className="font-medium">1 Year</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Availability:</span>
-                <span className="font-medium text-green-500">Open to Work</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Languages:</span>
-                <span className="font-medium">English (fluent), Nepali (native), Japanese (conversational)</span>
-              </div>
-            </div>
-          </div>
+            <MotionWrapper delay={0.4} className="space-y-4">
+              {[
+                { label: "Name", value: "Kapil Niure" },
+                { label: "Email", value: "kapilniure4@gmail.com" },
+                { label: "Location", value: "Kiyose, Tokyo" },
+                { label: "Experience", value: "1 Year" },
+                { label: "Availability", value: "Open to Work", isGreen: true },
+                { label: "Languages", value: "English (fluent), Nepali (native), Japanese (conversational)" },
+              ].map((item, index) => (
+                <motion.div
+                  key={item.label}
+                  className="flex justify-between"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <span className="text-muted-foreground">{item.label}:</span>
+                  <span className={`font-medium ${item.isGreen ? 'text-green-500' : ''}`}>
+                    {item.value}
+                  </span>
+                </motion.div>
+              ))}
+            </MotionWrapper>
+          </MotionWrapper>
           
-          <div className="md:col-span-7 lg:col-span-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <MotionWrapper delay={0.3} className="md:col-span-7 lg:col-span-8">
             <Tabs defaultValue="about" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="grid grid-cols-3 mb-8">
                 <TabsTrigger value="about">About Me</TabsTrigger>
@@ -62,93 +65,58 @@ const About = () => {
               </TabsList>
               
               <TabsContent value="about" className="space-y-4">
-                <p>
-                  I'm a web developer with 1 year of experience, passionate about creating 
-                  functional websites and digital experiences. My journey in web development 
-                  is just beginning, and I'm eager to learn and grow in this exciting field.
-                </p>
-                <p>
-                  I specialize in building responsive websites using modern technologies. 
-                  Although I'm still developing my skills, I'm committed to creating clean, 
-                  user-friendly web applications.
-                </p>
-                <p>
-                  When I'm not coding, I enjoy exploring new technologies and looking for 
-                  opportunities to expand my skills.
-                </p>
+                <MotionWrapper>
+                  <p>
+                    I'm a web developer with 1 year of experience, passionate about creating 
+                    functional websites and digital experiences. My journey in web development 
+                    is just beginning, and I'm eager to learn and grow in this exciting field.
+                  </p>
+                </MotionWrapper>
+                <MotionWrapper delay={0.2}>
+                  <p>
+                    I specialize in building responsive websites using modern technologies. 
+                    Although I'm still developing my skills, I'm committed to creating clean, 
+                    user-friendly web applications.
+                  </p>
+                </MotionWrapper>
+                <MotionWrapper delay={0.4}>
+                  <p>
+                    When I'm not coding, I enjoy exploring new technologies and looking for 
+                    opportunities to expand my skills.
+                  </p>
+                </MotionWrapper>
               </TabsContent>
               
               <TabsContent value="skills">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-lg font-medium mb-4">Technical Skills</h3>
-                    <ul className="space-y-3">
-                      {[
-                        { name: "HTML & CSS", level: 70 },
-                        { name: "JavaScript", level: 60 },
-                        { name: "React.js", level: 55 },
-                        { name: "Node.js", level: 30 },
-                        { name: "Next.js", level: 30 },
-                      ].map((skill) => (
-                        <li key={skill.name}>
-                          <div className="flex justify-between mb-1">
-                            <span className="font-medium">{skill.name}</span>
-                            <span className="text-muted-foreground">{skill.level}%</span>
-                          </div>
-                          <div className="h-2 bg-kapil-blue-light/30 rounded-full">
-                            <div 
-                              className="h-2 bg-kapil-red rounded-full"
-                              style={{ width: `${skill.level}%` }}
-                            />
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-lg font-medium mb-4">Design Skills</h3>
-                    <ul className="space-y-3">
-                      {[
-                        { name: "UI/UX Design", level: 50 },
-                        { name: "Figma", level: 60 },
-                        { name: "Adobe XD", level: 40 },
-                        { name: "Photoshop", level: 30 },
-                        { name: "Responsive Design", level: 65 },
-                      ].map((skill) => (
-                        <li key={skill.name}>
-                          <div className="flex justify-between mb-1">
-                            <span className="font-medium">{skill.name}</span>
-                            <span className="text-muted-foreground">{skill.level}%</span>
-                          </div>
-                          <div className="h-2 bg-kapil-blue-light/30 rounded-full">
-                            <div 
-                              className="h-2 bg-blue-500 rounded-full"
-                              style={{ width: `${skill.level}%` }}
-                            />
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <SkillsSection />
               </TabsContent>
               
               <TabsContent value="experience">
-                <div className="space-y-8">
-                  <div className="relative border-l-2 border-kapil-red pl-6 pb-6">
-                    <div className="absolute w-4 h-4 bg-kapil-red rounded-full -left-[9px] top-0" />
+                <MotionWrapper className="space-y-8">
+                  <motion.div 
+                    className="relative border-l-2 border-primary pl-6 pb-6"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <motion.div 
+                      className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-0"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.3 }}
+                    />
                     <h3 className="text-lg font-medium">Junior Web Developer</h3>
-                    <p className="text-kapil-red">First Professional Role (2023 - Present)</p>
+                    <p className="text-primary">First Professional Role (2023 - Present)</p>
                     <p className="mt-2 text-muted-foreground">
                       Developing web applications, learning modern frontend technologies, 
                       and gaining hands-on experience in web development.
                     </p>
-                  </div>
-                </div>
+                  </motion.div>
+                </MotionWrapper>
               </TabsContent>
             </Tabs>
-          </div>
+          </MotionWrapper>
         </div>
       </div>
     </section>

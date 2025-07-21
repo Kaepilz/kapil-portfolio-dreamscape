@@ -224,9 +224,10 @@ const Hero = () => {
                       </div>
                     ) : (
                       <img 
-                        src="/images/profile.jpg" 
+                        src="https://photos.fife.usercontent.google.com/pw/AP1GczM9EqUzCPihNmpXEHbiQdUKkAcpyChM3qPMN2UHdkzWuofC8A0Fz2xh=w809-h1079-s-no-gm?authuser=0" 
                         alt="Kapil Niure - Web Developer & Designer" 
                         className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
+                        crossOrigin="anonymous"
                         onError={() => setImageError(true)}
                       />
                     )}

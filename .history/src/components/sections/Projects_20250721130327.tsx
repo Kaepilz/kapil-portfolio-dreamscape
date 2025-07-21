@@ -156,8 +156,10 @@ const Projects = () => {
                 transition: { duration: 0.2 }
               }}
             >
-              <div 
-                className="group relative overflow-hidden rounded-lg bg-kapil-blue-medium border border-kapil-blue-light/20 hover:border-kapil-red hover:shadow-2xl transition-all duration-300"
+              <Link 
+                to={`/projects/${project.title.toLowerCase().replace(/ /g, "-")}`}
+                className="block group relative overflow-hidden rounded-lg bg-kapil-blue-medium border border-kapil-blue-light/20 hover:border-kapil-red hover:shadow-2xl transition-all duration-300"
+                onClick={() => window.scrollTo(0, 0)}
               >
                 <div className="aspect-video overflow-hidden relative">
                   <motion.img
@@ -239,15 +241,11 @@ const Projects = () => {
                     )}
                   </motion.div>
                 </motion.div>
-              </div>
-              
-              <Link
-                to={`/projects/${project.title.toLowerCase().replace(/ /g, "-")}`}
-                className="block p-4"
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <h3 className="text-lg font-bold group-hover:text-kapil-red transition-colors duration-200">{project.title}</h3>
-                <p className="text-sm text-kapil-red">{project.category}</p>
+                
+                <div className="p-4">
+                  <h3 className="text-lg font-bold group-hover:text-kapil-red transition-colors duration-200">{project.title}</h3>
+                  <p className="text-sm text-kapil-red">{project.category}</p>
+                </div>
               </Link>
             </motion.div>
           ))}

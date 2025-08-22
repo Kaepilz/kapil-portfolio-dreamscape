@@ -14,6 +14,11 @@ import { ModeToggle } from "@/components/ModeToggle";
 import { FloatingShapes } from "@/components/FloatingShapes";
 import { Skills } from "@/components/sections/Skills";
 import { ClientOnly } from "@/components/ClientOnly";
+import { AIAssistant } from "@/components/AIAssistant";
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { SEOManager } from "@/components/SEOManager";
+import { PerformanceMonitor, BehaviorTracker } from "@/components/Analytics";
+import { SecurityHeaders } from "@/components/SecurityHeaders";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +49,11 @@ const Index = () => {
 
   return (
     <>
+      <SEOManager />
+      <SecurityHeaders />
+      <PerformanceMonitor />
+      <BehaviorTracker />
+      
       <AnimatePresence mode="wait">
         {isLoading && (
           <LoadingScreen onComplete={() => setIsLoading(false)} />
@@ -63,6 +73,7 @@ const Index = () => {
           
           {/* Fixed elements */}
           <ModeToggle />
+          <LanguageToggle />
           <Navbar />
           
           <main className="flex-grow relative z-10">
@@ -83,6 +94,7 @@ const Index = () => {
           </main>
           
           <Footer />
+          <AIAssistant />
         </motion.div>
       )}
     </>

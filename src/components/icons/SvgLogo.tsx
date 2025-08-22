@@ -23,7 +23,6 @@ export function SvgLogo({ src, color }: SvgLogoProps) {
         ref={meshRef}
         src={src}
         scale={0.01}
-        fill={color}
       />
     </Float>
   );

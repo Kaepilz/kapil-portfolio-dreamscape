@@ -12,7 +12,7 @@ import { LoadingScreen } from "@/components/LoadingScreen";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { ModeToggle } from "@/components/ModeToggle";
 import { FloatingShapes } from "@/components/FloatingShapes";
-import { Skills } from "@/components/sections/Skills";
+import { EnhancedSkills } from "@/components/EnhancedSkills";
 import { ClientOnly } from "@/components/ClientOnly";
 import { AIAssistant } from "@/components/AIAssistant";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -85,7 +85,7 @@ const Index = () => {
               <Hero />
               <About />
               <ClientOnly>
-                <Skills />
+                <EnhancedSkills />
               </ClientOnly>
               <Services />
               <Projects />

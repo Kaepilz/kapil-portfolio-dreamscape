@@ -7,8 +7,17 @@ import { Skills } from "@/components/sections/Skills";
 import { EnhancedContact } from "@/components/sections/EnhancedContact";
 import Projects from "@/components/sections/Projects";
 import { AIAssistant } from "@/components/AIAssistant";
+import { ChatBot } from "@/components/ChatBot";
+import { LoadingScreen } from "@/components/LoadingScreen";
+import { useState } from 'react';
 
 const Index = () => {
+  const [showContent, setShowContent] = useState(false);
+
+  if (!showContent) {
+    return <LoadingScreen onComplete={() => setShowContent(true)} />;
+  }
+
   return (
     <>
       <Helmet>
@@ -36,6 +45,7 @@ const Index = () => {
           <EnhancedContact />
         </main>
         <AIAssistant />
+        <ChatBot />
       </div>
     </>
   );

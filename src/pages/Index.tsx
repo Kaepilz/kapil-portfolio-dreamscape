@@ -1,8 +1,8 @@
 
 import { Helmet } from 'react-helmet-async';
 import Navbar from "@/components/Navbar";
-import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
 import { Skills } from "@/components/sections/Skills";
 import { EnhancedContact } from "@/components/sections/EnhancedContact";
 import Projects from "@/components/sections/Projects";

@@ -1,0 +1,89 @@
+
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Kapil Niure",
+    "title": "Full-Stack Developer & UI/UX Designer",
+    "description": "16-year-old passionate developer from Tokyo, creating beautiful and functional digital experiences with modern technologies.",
+    "cta": {
+      "projects": "View My Work",
+      "contact": "Get In Touch"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate developer with a vision for the future",
+    "description": "I'm a 16-year-old developer studying at Nerima Technical High School in Tokyo. With a passion for both coding and design, I create digital solutions that combine functionality with beautiful user experiences.",
+    "stats": {
+      "experience": "2+ Years Experience",
+      "projects": "15+ Projects Completed",
+      "technologies": "10+ Technologies Mastered",
+      "availability": "Available for Projects"
+    }
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "subtitle": "A comprehensive toolkit for creating exceptional digital experiences",
+    "technical": "Technical Skills",
+    "design": "Design Skills",
+    "proficiency": "Proficiency"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Check out some of my recent projects. Each project represents my dedication to creating beautiful and functional digital experiences.",
+    "categories": {
+      "all": "All",
+      "web": "Web Development",
+      "design": "UI/UX Design",
+      "brand": "Brand Identity"
+    },
+    "loadMore": "Load More Projects",
+    "viewLive": "Live Demo",
+    "viewCode": "View Code"
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.",
+    "getInTouch": "Get in Touch",
+    "followMe": "Follow Me",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "your.email@example.com",
+      "subjectPlaceholder": "What's this about?",
+      "messagePlaceholder": "Tell me about your project or idea...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "successDescription": "Thank you for your message. I'll get back to you soon.",
+      "error": "Error sending message",
+      "errorDescription": "Please try again or contact me directly via email."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "What I can do for you",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Modern, responsive websites built with the latest technologies and best practices."
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "User-centered design that creates intuitive and engaging digital experiences."
+    },
+    "mobile": {
+      "title": "Mobile Development",
+      "description": "Cross-platform mobile applications that work seamlessly across all devices."
+    }
+  }
+}

@@ -1,0 +1,89 @@
+
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "私について",
+    "services": "サービス",
+    "projects": "プロジェクト",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "greeting": "こんにちは、私は",
+    "name": "ニウレ カピル",
+    "title": "フルスタック開発者・UI/UXデザイナー",
+    "description": "東京在住の16歳の情熱的な開発者として、モダンな技術で美しく機能的なデジタル体験を創造しています。",
+    "cta": {
+      "projects": "作品を見る",
+      "contact": "お問い合わせ"
+    }
+  },
+  "about": {
+    "title": "私について",
+    "subtitle": "未来への展望を持つ情熱的な開発者",
+    "description": "私は東京の練馬工業高等学校に通う16歳の開発者です。コーディングとデザインの両方に情熱を持ち、機能性と美しいユーザーエクスペリエンスを組み合わせたデジタルソリューションを作成しています。",
+    "stats": {
+      "experience": "2年以上の経験",
+      "projects": "15以上のプロジェクト完了",
+      "technologies": "10以上の技術習得",
+      "availability": "プロジェクト受付中"
+    }
+  },
+  "skills": {
+    "title": "スキルと専門知識",
+    "subtitle": "優れたデジタル体験を創造するための包括的なツールキット",
+    "technical": "技術スキル",
+    "design": "デザインスキル",
+    "proficiency": "習熟度"
+  },
+  "projects": {
+    "title": "私のプロジェクト",
+    "subtitle": "最近のプロジェクトをご覧ください。各プロジェクトは美しく機能的なデジタル体験を創造することへの私の献身を表しています。",
+    "categories": {
+      "all": "すべて",
+      "web": "ウェブ開発",
+      "design": "UI/UXデザイン",
+      "brand": "ブランドアイデンティティ"
+    },
+    "loadMore": "さらに読み込む",
+    "viewLive": "ライブデモ",
+    "viewCode": "コードを見る"
+  },
+  "contact": {
+    "title": "一緒に働きましょう",
+    "subtitle": "あなたのアイデアを実現する準備はできていますか？次のプロジェクトについて話し合い、一緒に素晴らしいものを作りましょう。",
+    "getInTouch": "お問い合わせ",
+    "followMe": "フォローする",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ",
+      "namePlaceholder": "お名前をご入力ください",
+      "emailPlaceholder": "your.email@example.com",
+      "subjectPlaceholder": "どのようなご用件でしょうか？",
+      "messagePlaceholder": "プロジェクトやアイデアについて教えてください...",
+      "send": "メッセージを送信",
+      "sending": "送信中...",
+      "success": "メッセージが正常に送信されました！",
+      "successDescription": "メッセージをありがとうございます。すぐにご返信いたします。",
+      "error": "メッセージの送信エラー",
+      "errorDescription": "もう一度お試しいただくか、メールで直接お問い合わせください。"
+    }
+  },
+  "services": {
+    "title": "サービス",
+    "subtitle": "私ができること",
+    "webDev": {
+      "title": "ウェブ開発",
+      "description": "最新技術とベストプラクティスで構築されたモダンでレスポンシブなウェブサイト。"
+    },
+    "uiux": {
+      "title": "UI/UXデザイン",
+      "description": "直感的で魅力的なデジタル体験を創造するユーザー中心のデザイン。"
+    },
+    "mobile": {
+      "title": "モバイル開発",
+      "description": "すべてのデバイスでシームレスに動作するクロスプラットフォームモバイルアプリケーション。"
+    }
+  }
+}

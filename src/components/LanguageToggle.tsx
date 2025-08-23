@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe } from 'lucide-react';
@@ -14,9 +15,8 @@ export const LanguageToggle: React.FC = () => {
 
   return (
     <motion.div
-      className="fixed top-4 right-20 z-50"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <Button

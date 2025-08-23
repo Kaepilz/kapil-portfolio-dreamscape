@@ -1,6 +1,8 @@
+
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, Home, User, Code, Briefcase, Mail, Sun, Moon } from "lucide-react";
+import { LanguageToggle } from "./LanguageToggle";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#home", icon: <Home className="w-4 h-4 mr-2" /> },
@@ -94,13 +96,18 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <a 
-          href="#home" 
-          className="text-xl md:text-2xl font-bold flex items-center"
-        >
-          <span className="text-kapil-red">K</span>apil
-          <span className="text-kapil-red ml-0.5">.</span>
-        </a>
+        <div className="flex items-center gap-4">
+          <a 
+            href="#home" 
+            className="text-xl md:text-2xl font-bold flex items-center"
+          >
+            <span className="text-kapil-red">K</span>apil
+            <span className="text-kapil-red ml-0.5">.</span>
+          </a>
+          
+          {/* Language toggle on the left side */}
+          <LanguageToggle />
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">

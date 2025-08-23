@@ -1,102 +1,42 @@
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from 'react-helmet-async';
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Services from "@/components/sections/Services";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { Skills } from "@/components/sections/Skills";
+import { EnhancedContact } from "@/components/sections/EnhancedContact";
 import Projects from "@/components/sections/Projects";
-import Contact from "@/components/sections/Contact";
-import { LoadingScreen } from "@/components/LoadingScreen";
-import { ScrollProgress } from "@/components/ScrollProgress";
-import { ModeToggle } from "@/components/ModeToggle";
-import { FloatingShapes } from "@/components/FloatingShapes";
-import { EnhancedSkills } from "@/components/EnhancedSkills";
-import { ClientOnly } from "@/components/ClientOnly";
 import { AIAssistant } from "@/components/AIAssistant";
-import { LanguageToggle } from "@/components/LanguageToggle";
-import { SEOManager } from "@/components/SEOManager";
-import { PerformanceMonitor, BehaviorTracker } from "@/components/Analytics";
-import { SecurityHeaders } from "@/components/SecurityHeaders";
 
 const Index = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    // Update document title and meta tags for SEO
-    document.title = "Kapil Niure - Web Developer & Designer | Portfolio";
-    
-    // Add meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Kapil Niure - Professional Web Developer & Designer specializing in React, TypeScript, and modern web technologies. View my portfolio and get in touch.');
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = 'Kapil Niure - Professional Web Developer & Designer specializing in React, TypeScript, and modern web technologies. View my portfolio and get in touch.';
-      document.head.appendChild(meta);
-    }
-
-    // Add keywords meta tag
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = 'kapil niure, website, portfolio, web developer, designer, react, typescript, javascript, frontend, fullstack';
-      document.head.appendChild(meta);
-    }
-  }, [isLoading]);
-
   return (
     <>
-      <SEOManager />
-      <SecurityHeaders />
-      <PerformanceMonitor />
-      <BehaviorTracker />
+      <Helmet>
+        <title>Kapil Niure - Full-Stack Developer & UI/UX Designer | Tokyo</title>
+        <meta name="description" content="16-year-old passionate developer from Tokyo creating beautiful and functional digital experiences with React, TypeScript, and modern web technologies." />
+        <meta name="keywords" content="Kapil Niure, Full-Stack Developer, UI/UX Designer, React, TypeScript, Web Development, Tokyo, Japan" />
+        <meta name="author" content="Kapil Niure" />
+        <meta property="og:title" content="Kapil Niure - Full-Stack Developer & UI/UX Designer" />
+        <meta property="og:description" content="16-year-old passionate developer from Tokyo creating beautiful and functional digital experiences." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kapilniure.dev" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Kapil Niure - Full-Stack Developer & UI/UX Designer" />
+        <meta name="twitter:description" content="16-year-old passionate developer from Tokyo creating beautiful digital experiences." />
+        <link rel="canonical" href="https://kapilniure.dev" />
+      </Helmet>
       
-      <AnimatePresence mode="wait">
-        {isLoading && (
-          <LoadingScreen onComplete={() => setIsLoading(false)} />
-        )}
-      </AnimatePresence>
-
-      {!isLoading && (
-        <motion.div 
-          className="min-h-screen flex flex-col relative"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          {/* Enhanced background effects */}
-          <FloatingShapes />
-          <ScrollProgress />
-          
-          {/* Fixed elements */}
-          <ModeToggle />
-          <LanguageToggle />
-          <Navbar />
-          
-          <main className="flex-grow relative z-10">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <Hero />
-              <About />
-              <ClientOnly>
-                <EnhancedSkills />
-              </ClientOnly>
-              <Services />
-              <Projects />
-              <Contact />
-            </motion.div>
-          </main>
-          
-          <Footer />
-          <AIAssistant />
-        </motion.div>
-      )}
+      <div className="min-h-screen bg-background text-foreground">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <EnhancedContact />
+        </main>
+        <AIAssistant />
+      </div>
     </>
   );
 };

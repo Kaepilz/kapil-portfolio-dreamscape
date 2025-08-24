@@ -1,105 +1,112 @@
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface LoadingScreenProps {
-  onComplete: () => void;
+  onComplete?: () => void;
 }
 
-export const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
+export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prev) => {
+    // Simulate loading progress
+    const interval = setInterval(() => {
+      setProgress(prev => {
         if (prev >= 100) {
-          clearInterval(timer);
-          setTimeout(onComplete, 500); // Small delay before removing loading screen
+          clearInterval(interval);
+          setTimeout(() => {
+            setIsLoading(false);
+            onComplete?.();
+          }, 500);
           return 100;
         }
-        return prev + 2;
+        return prev + Math.random() * 15;
       });
-    }, 50);
+    }, 150);
 
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   }, [onComplete]);
 
   return (
-    <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-primary via-blue-600 to-purple-700"
-      initial={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Animated background particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(50)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            animate={{
-              y: [null, -20, null],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="text-center z-10">
-        {/* Logo/Name Animation */}
+    <AnimatePresence>
+      {isLoading && (
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ duration: 1, ease: "backOut" }}
-          className="mb-8"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-4">
-            K
-          </h1>
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="h-1 bg-white/50 mx-auto"
-          />
-        </motion.div>
-
-        {/* Loading Progress */}
-        <div className="w-64 mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-            className="text-white/80 text-sm mb-4"
-          >
-            Loading Portfolio... {progress}%
-          </motion.div>
-          
-          <div className="w-full bg-white/20 rounded-full h-2">
+          <div className="text-center">
+            {/* Logo Animation */}
             <motion.div
-              className="bg-white h-2 rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ ease: "easeOut" }}
-            />
-          </div>
-        </div>
+              className="mb-8"
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="w-20 h-20 mx-auto bg-gradient-to-r from-primary to-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-2xl font-bold text-primary-foreground">K</span>
+              </div>
+            </motion.div>
 
-        {/* Rotating loader */}
-        <motion.div
-          className="mt-8 w-8 h-8 border-2 border-white/30 border-t-white rounded-full mx-auto"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-        />
-      </div>
-    </motion.div>
+            {/* Loading Text */}
+            <motion.h2
+              className="text-2xl font-bold mb-6 bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              Kapil's Portfolio
+            </motion.h2>
+
+            {/* Progress Bar */}
+            <div className="w-64 mx-auto">
+              <div className="h-2 bg-muted rounded-full overflow-hidden mb-4">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-primary to-blue-500 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${progress}%` }}
+                  transition={{ ease: "easeOut" }}
+                />
+              </div>
+              <motion.p
+                className="text-sm text-muted-foreground"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                Loading amazing experiences...
+              </motion.p>
+            </div>
+
+            {/* Floating particles */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {[...Array(20)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-2 h-2 bg-primary/20 rounded-full"
+                  initial={{
+                    x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+                    y: (typeof window !== 'undefined' ? window.innerHeight : 800) + 10,
+                    opacity: 0
+                  }}
+                  animate={{
+                    y: -10,
+                    opacity: [0, 1, 0]
+                  }}
+                  transition={{
+                    duration: Math.random() * 3 + 2,
+                    delay: Math.random() * 2,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };

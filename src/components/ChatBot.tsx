@@ -15,10 +15,12 @@ const KAPIL_INFO = {
   location: "Tokyo, Japan",
   hobbies: ["Web Development", "UI/UX Design", "Programming", "Learning new technologies", "Creating digital experiences"],
   skills: ["React", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Node.js", "Python", "UI/UX Design", "Figma", "Photoshop"],
-  workAvailability: "Available for freelance projects and internships",
-  languages: ["English", "Japanese"],
-  experience: "2+ years of web development experience",
-  currentProjects: ["Personal Portfolio", "E-commerce Platform", "Mobile Apps"],
+  workAvailability: "Available for freelance projects and internships. I work flexible hours and am committed to delivering quality results.",
+  languages: ["English", "Japanese", "Hindi"],
+  experience: "2+ years of web development experience with focus on modern technologies",
+  currentProjects: ["Personal Portfolio Website", "E-commerce Platform with React", "Learning Management System"],
+  learning: ["Advanced React patterns", "Node.js backend development", "UI/UX design principles"],
+  goals: ["Become a full-stack developer", "Master software engineering fundamentals", "Explore AI/ML technologies"],
   contact: {
     email: "kapil@example.com",
     social: ["GitHub", "LinkedIn", "Twitter"]
@@ -167,7 +169,17 @@ export const ChatBot: React.FC<ChatBotProps> = ({ onAnalyticsEvent }) => {
 
     // Languages questions
     if (message.includes('languages') || message.includes('speak')) {
-      return `Kapil speaks ${KAPIL_INFO.languages.join(' and ')}. He can communicate effectively in both languages for international projects.`;
+      return `Kapil speaks ${KAPIL_INFO.languages.join(', ')}. He can communicate effectively in multiple languages for international projects.`;
+    }
+
+    // Learning questions
+    if (message.includes('learning') || message.includes('studying') || message.includes('currently learning')) {
+      return `Kapil is currently focused on: ${KAPIL_INFO.learning.join(', ')}. He's always exploring new technologies and improving his skills.`;
+    }
+
+    // Goals questions
+    if (message.includes('goals') || message.includes('future') || message.includes('plans')) {
+      return `Kapil's career goals include: ${KAPIL_INFO.goals.join(', ')}. He's passionate about continuous learning and growth in technology.`;
     }
 
     // Default response

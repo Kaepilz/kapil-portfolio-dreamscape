@@ -146,6 +146,48 @@ export type Database = {
         }
         Relationships: []
       }
+      feedback_messages: {
+        Row: {
+          category: string
+          created_at: string
+          email: string | null
+          id: string
+          ip_address: unknown | null
+          message: string
+          metadata: Json | null
+          name: string
+          rating: number | null
+          updated_at: string
+          user_agent: string | null
+        }
+        Insert: {
+          category?: string
+          created_at?: string
+          email?: string | null
+          id?: string
+          ip_address?: unknown | null
+          message: string
+          metadata?: Json | null
+          name: string
+          rating?: number | null
+          updated_at?: string
+          user_agent?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          email?: string | null
+          id?: string
+          ip_address?: unknown | null
+          message?: string
+          metadata?: Json | null
+          name?: string
+          rating?: number | null
+          updated_at?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       privacy_consent: {
         Row: {
           analytics_consent: boolean | null

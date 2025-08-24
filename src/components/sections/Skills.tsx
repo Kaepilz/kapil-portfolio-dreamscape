@@ -4,60 +4,60 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { SvgLogo } from '../icons/SvgLogo';
 
-// Enhanced skill data with actual logos and better organization
+// Enhanced skill data with actual logos and updated percentages
 const technicalSkills = [
   { 
     name: "HTML5", 
-    level: 95, 
+    level: 85, 
     color: "#E34F26",
     logo: "/icons/html5.svg",
     description: "Semantic markup & accessibility"
   },
   { 
     name: "CSS3", 
-    level: 90, 
+    level: 85, 
     color: "#1572B6",
     logo: "/icons/css3.svg",
     description: "Advanced styling & animations"
   },
   { 
     name: "JavaScript", 
-    level: 88, 
+    level: 85, 
     color: "#F7DF1E",
     logo: "/icons/javascript.svg",
     description: "ES6+ & modern frameworks"
   },
   { 
     name: "TypeScript", 
-    level: 85, 
+    level: 50, 
     color: "#3178C6",
     logo: "/icons/typescript.svg",
     description: "Type-safe development"
   },
   { 
     name: "React", 
-    level: 90, 
+    level: 50, 
     color: "#61DAFB",
     logo: "/icons/react.svg",
     description: "Component-based architecture"
   },
   { 
     name: "Node.js", 
-    level: 80, 
+    level: 50, 
     color: "#339933",
     logo: "/icons/nodejs.svg",
     description: "Server-side JavaScript"
   },
   { 
     name: "Tailwind CSS", 
-    level: 92, 
+    level: 50, 
     color: "#06B6D4",
     logo: "/icons/tailwind.svg",
     description: "Utility-first CSS framework"
   },
   { 
     name: "Firebase", 
-    level: 75, 
+    level: 50, 
     color: "#FFCA28",
     logo: "/icons/firebase.svg",
     description: "Backend as a Service"
@@ -67,7 +67,7 @@ const technicalSkills = [
 const designSkills = [
   { 
     name: "UI/UX Design", 
-    level: 85, 
+    level: 90, 
     color: "#FF6B6B",
     logo: "/icons/uiux.svg",
     description: "User-centered design"
@@ -80,11 +80,11 @@ const designSkills = [
     description: "Design & prototyping"
   },
   { 
-    name: "Adobe XD", 
+    name: "Canva", 
     level: 75, 
-    color: "#FF61F6",
-    logo: "/icons/adobexd.svg",
-    description: "Experience design"
+    color: "#00C4CC",
+    logo: "/icons/canva.svg",
+    description: "Graphic design & templates"
   },
   { 
     name: "Photoshop", 
@@ -129,17 +129,18 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
         {/* Skill logo and name */}
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-16 h-16">
-              <Canvas>
-                <Suspense fallback={null}>
-                  <ambientLight intensity={0.5} />
-                  <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-                  <pointLight position={[-10, -10, -10]} />
-                  <SvgLogo src={skill.logo} color={skill.color} />
-                  <OrbitControls enableZoom={false} enablePan={false} />
-                </Suspense>
-              </Canvas>
-            </div>
+            <motion.div 
+              className="w-16 h-16 relative group-hover:scale-110 transition-transform duration-300"
+              whileHover={{ rotateY: 360 }}
+              transition={{ duration: 0.6 }}
+            >
+              <img 
+                src={skill.logo} 
+                alt={skill.name}
+                className="w-full h-full object-contain filter drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300"
+                style={{ filter: `drop-shadow(0 4px 8px ${skill.color}40)` }}
+              />
+            </motion.div>
             <h3 className="font-semibold text-lg">{skill.name}</h3>
           </div>
           

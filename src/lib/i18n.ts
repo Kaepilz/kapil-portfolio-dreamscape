@@ -126,6 +126,40 @@ const resources = {
       messages: {
         messageSent: 'Message Sent!',
         messageDescription: 'Thank you for your message. I\'ll get back to you soon.'
+      },
+      // Roadmap Section
+      roadmap: {
+        title: 'Learning Roadmap',
+        description: 'My journey of continuous learning and skill development in technology',
+        current: 'Current',
+        inProgress: 'In Progress',
+        future: 'Future',
+        completed: 'Completed',
+        keyTechnologies: 'Key Technologies',
+        overallProgress: 'Overall Progress',
+        target: 'Target',
+        letsConnect: 'Let\'s Connect'
+      },
+      // Feedback Section
+      feedback: {
+        title: 'Share Your Feedback',
+        description: 'Your feedback helps me improve and grow. I\'d love to hear your thoughts about my work, skills, or potential collaboration opportunities.',
+        name: 'Name',
+        email: 'Email (Optional)',
+        rating: 'Overall Rating (Optional)',
+        category: 'Feedback Category',
+        message: 'Your Message',
+        messagePlaceholder: 'Share your thoughts, suggestions, or feedback...',
+        send: 'Send Feedback',
+        sending: 'Submitting...',
+        categories: {
+          general: 'General Feedback',
+          design: 'Design & UI/UX', 
+          technical: 'Technical Skills',
+          collaboration: 'Collaboration'
+        },
+        whyMatters: 'Why Your Feedback Matters',
+        whatNext: 'What Happens Next?'
       }
     }
   },
@@ -253,6 +287,40 @@ const resources = {
       messages: {
         messageSent: 'メッセージが送信されました！',
         messageDescription: 'メッセージをありがとうございます。すぐにお返事いたします。'
+      },
+      // Roadmap Section
+      roadmap: {
+        title: '学習ロードマップ',
+        description: '技術における継続的な学習とスキル開発の旅',
+        current: '現在',
+        inProgress: '進行中',
+        future: '将来',
+        completed: '完了',
+        keyTechnologies: '主要技術',
+        overallProgress: '全体的な進捗',
+        target: '目標',
+        letsConnect: 'つながりましょう'
+      },
+      // Feedback Section  
+      feedback: {
+        title: 'フィードバックをお聞かせください',
+        description: 'あなたのフィードバックは私の成長と改善に役立ちます。私の仕事、スキル、またはコラボレーションの機会についてお聞かせください。',
+        name: 'お名前',
+        email: 'メールアドレス（任意）',
+        rating: '総合評価（任意）',
+        category: 'フィードバックカテゴリ',
+        message: 'メッセージ',
+        messagePlaceholder: 'ご意見、提案、フィードバックをお聞かせください...',
+        send: 'フィードバックを送信',
+        sending: '送信中...',
+        categories: {
+          general: '一般的なフィードバック',
+          design: 'デザイン & UI/UX',
+          technical: '技術スキル',
+          collaboration: 'コラボレーション'
+        },
+        whyMatters: 'フィードバックが重要な理由',
+        whatNext: '次に何が起こりますか？'
       }
     }
   }

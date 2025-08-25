@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FloatingShapes } from "@/components/FloatingShapes";
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [imageError, setImageError] = useState(false);
 
   const titleVariants = {
@@ -64,9 +66,9 @@ const Hero = () => {
             <FloatingShapes />
             
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-              <TypewriterText text="Hi, I'm " />
+              <TypewriterText text={t('hero.greeting')} />
               <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                <TypewriterText text="Kapil" className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent" />
+                <TypewriterText text={t('hero.name')} className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent" />
               </span>
               <motion.span 
                 className="text-primary inline-block"
@@ -83,7 +85,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              Web Developer <span className="text-primary">&</span> Designer
+              {t('hero.title')}
             </motion.h2>
             
             <motion.p 
@@ -92,9 +94,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              I craft beautiful, functional websites and digital experiences 
-              that help businesses grow and succeed in the digital world. 
-              Let's build something amazing together.
+              {t('hero.description')}
             </motion.p>
             
             <motion.div 
@@ -109,7 +109,7 @@ const Hero = () => {
                 className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <a href="#projects">
-                  View My Work <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('hero.viewWork')} <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button 
@@ -119,7 +119,7 @@ const Hero = () => {
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105"
               >
                 <a href="#contact">
-                  Contact Me
+                  {t('hero.contactMe')}
                 </a>
               </Button>
               <Button 
@@ -129,7 +129,7 @@ const Hero = () => {
                 className="hover:bg-secondary/80 transition-all duration-300 transform hover:scale-105"
               >
                 <a href="/resume.pdf" download>
-                  <Download className="mr-2 h-4 w-4" /> Resume
+                  <Download className="mr-2 h-4 w-4" /> {t('hero.resume')}
                 </a>
               </Button>
             </motion.div>
@@ -219,7 +219,7 @@ const Hero = () => {
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <span className="mb-3 font-medium group-hover:font-semibold transition-all">Discover More</span>
+          <span className="mb-3 font-medium group-hover:font-semibold transition-all">{t('hero.discoverMore')}</span>
           <motion.div
             className="w-6 h-10 border-2 border-current rounded-full flex justify-center"
             whileHover={{ scale: 1.1 }}

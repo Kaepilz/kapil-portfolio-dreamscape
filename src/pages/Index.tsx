@@ -5,8 +5,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import { Skills } from "@/components/sections/Skills";
 import { Roadmap } from "@/components/sections/Roadmap";
-import { Feedback } from "@/components/sections/Feedback";
-import { EnhancedContact } from "@/components/sections/EnhancedContact";
+import { UnifiedContact } from "@/components/sections/UnifiedContact";
 import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
 import Footer from "@/components/Footer";
@@ -72,8 +71,7 @@ const Index = () => {
           <Roadmap />
           <Services />
           <Projects />
-          <Feedback onAnalyticsEvent={handleAnalyticsEvent} />
-          <EnhancedContact />
+          <UnifiedContact />
         </main>
         <Footer />
         <ChatBot onAnalyticsEvent={handleAnalyticsEvent} />

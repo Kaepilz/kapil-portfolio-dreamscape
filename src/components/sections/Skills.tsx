@@ -131,14 +131,32 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
           <div className="flex items-center gap-3 mb-3">
             <motion.div 
               className="w-16 h-16 relative group-hover:scale-110 transition-transform duration-300"
-              whileHover={{ rotateY: 360 }}
-              transition={{ duration: 0.6 }}
+              whileHover={{ 
+                rotateY: 360,
+                scale: 1.1,
+              }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              <img 
+              <motion.img 
                 src={skill.logo} 
                 alt={skill.name}
                 className="w-full h-full object-contain filter drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300"
                 style={{ filter: `drop-shadow(0 4px 8px ${skill.color}40)` }}
+                whileHover={{
+                  rotate: 360,
+                }}
+                transition={{ 
+                  duration: 0.8,
+                  ease: "easeInOut"
+                }}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = `<div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary font-bold text-sm">${skill.name.charAt(0)}</div>`;
+                  }
+                }}
               />
             </motion.div>
             <h3 className="font-semibold text-lg">{skill.name}</h3>

@@ -3,16 +3,18 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, Home, User, Code, Briefcase, Mail, Sun, Moon } from "lucide-react";
 import { LanguageToggle } from "./LanguageToggle";
-
-const NAV_ITEMS = [
-  { label: "Home", href: "#home", icon: <Home className="w-4 h-4 mr-2" /> },
-  { label: "About", href: "#about", icon: <User className="w-4 h-4 mr-2" /> },
-  { label: "Services", href: "#services", icon: <Code className="w-4 h-4 mr-2" /> },
-  { label: "Projects", href: "#projects", icon: <Briefcase className="w-4 h-4 mr-2" /> },
-  { label: "Contact", href: "#contact", icon: <Mail className="w-4 h-4 mr-2" /> },
-];
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const { t } = useTranslation();
+  
+  const NAV_ITEMS = [
+    { label: t('nav.home'), href: "#home", icon: <Home className="w-4 h-4 mr-2" /> },
+    { label: t('nav.about'), href: "#about", icon: <User className="w-4 h-4 mr-2" /> },
+    { label: t('nav.services'), href: "#services", icon: <Code className="w-4 h-4 mr-2" /> },
+    { label: t('nav.projects'), href: "#projects", icon: <Briefcase className="w-4 h-4 mr-2" /> },
+    { label: t('nav.contact'), href: "#contact", icon: <Mail className="w-4 h-4 mr-2" /> },
+  ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("#home");
   const [scrolled, setScrolled] = useState(false);

@@ -65,8 +65,9 @@ const Hero = () => {
             {/* Floating elements around the text */}
             <FloatingShapes />
             
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight text-foreground">
               <TypewriterText text={t('hero.greeting')} />
+              {" "}
               <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
                 <TypewriterText text={t('hero.name')} className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent" />
               </span>

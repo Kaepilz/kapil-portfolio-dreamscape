@@ -11,6 +11,8 @@ export const LanguageToggle: React.FC = () => {
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'jp' : 'en';
     i18n.changeLanguage(newLang);
+    // Force a re-render by triggering a page refresh or state update
+    window.dispatchEvent(new Event('languageChanged'));
   };
 
   return (

@@ -43,7 +43,7 @@ export const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentChange 
         console.error('Error parsing saved consents:', error);
       }
     }
-  }, [onConsentChange]);
+  }, []); // Remove onConsentChange from dependency array to prevent infinite loop
 
   const handleConsentToggle = (type: keyof ConsentSettings) => {
     setConsents(prev => ({

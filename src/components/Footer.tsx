@@ -1,9 +1,7 @@
 
-import { Github, Twitter, Linkedin, Instagram, Mail } from "lucide-react";
-import { useTranslation } from 'react-i18next';
+import { Github, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
-  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -16,49 +14,43 @@ const Footer = () => {
               <span className="text-kapil-red">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              {t('footer.description')}
+              Web Developer & Designer
             </p>
           </div>
           
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a 
-              href="https://github.com/kapilniure"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-kapil-red transition-colors transform hover:scale-110"
+              href="#" 
+              className="text-muted-foreground hover:text-kapil-red transition-colors"
               aria-label="GitHub"
             >
               <Github className="w-5 h-5" />
             </a>
             <a 
-              href="https://linkedin.com/in/kapilniure"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-kapil-red transition-colors transform hover:scale-110"
+              href="#" 
+              className="text-muted-foreground hover:text-kapil-red transition-colors"
+              aria-label="Twitter"
+            >
+              <Twitter className="w-5 h-5" />
+            </a>
+            <a 
+              href="#" 
+              className="text-muted-foreground hover:text-kapil-red transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="mailto:kapilniure4@gmail.com"
-              className="text-muted-foreground hover:text-kapil-red transition-colors transform hover:scale-110"
-              aria-label="Email"
+              href="#" 
+              className="text-muted-foreground hover:text-kapil-red transition-colors"
+              aria-label="Instagram"
             >
-              <Mail className="w-5 h-5" />
-            </a>
-            <a 
-              href="https://twitter.com/kapilniure"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-kapil-red transition-colors transform hover:scale-110"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5" />
+              <Instagram className="w-5 h-5" />
             </a>
           </div>
           
           <div className="text-sm text-muted-foreground">
-            © {currentYear} {t('footer.allRightsReserved')}
+            © {currentYear} All Rights Reserved
           </div>
         </div>
       </div>

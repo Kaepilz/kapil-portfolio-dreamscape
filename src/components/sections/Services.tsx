@@ -1,7 +1,6 @@
 
 import { Code, Layout, Palette, Smartphone, Lightbulb, Zap } from "lucide-react";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
-import { useTranslation } from 'react-i18next';
 
 const ServiceCard = ({ 
   title, 
@@ -28,27 +27,25 @@ const ServiceCard = ({
 };
 
 const Services = () => {
-  const { t } = useTranslation();
-  
   const services = [
     {
-      title: t('services.webDev.title'),
-      description: t('services.webDev.description'),
+      title: "Web Development",
+      description: "Custom website development with modern technologies, ensuring fast, responsive, and user-friendly experiences.",
       icon: Code,
     },
     {
-      title: t('services.uiux.title'),
-      description: t('services.uiux.description'),
+      title: "UI/UX Design",
+      description: "Creative and intuitive user interface designs that enhance user experience and increase engagement.",
       icon: Layout,
     },
     {
-      title: t('services.brandIdentity.title'),
-      description: t('services.brandIdentity.description'),
+      title: "Brand Identity",
+      description: "Cohesive brand identity development including logos, color schemes, and design systems for digital platforms.",
       icon: Palette,
     },
     {
-      title: t('services.mobileFirst.title'),
-      description: t('services.mobileFirst.description'),
+      title: "Responsive Design",
+      description: "Mobile-first approach ensuring your website looks and functions perfectly on all devices and screen sizes.",
       icon: Smartphone,
     },
     {
@@ -66,9 +63,10 @@ const Services = () => {
   return (
     <section id="services" className="section-padding">
       <div className="container mx-auto">
-        <h2 className="section-title">{t('services.title')}</h2>
+        <h2 className="section-title">My Services</h2>
         <p className="text-muted-foreground max-w-2xl mb-12">
-          {t('services.description')}
+          I offer a wide range of services to help businesses and individuals establish 
+          a strong online presence and create exceptional digital experiences.
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -3,6 +3,7 @@ import { useState, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { SvgLogo } from '../icons/SvgLogo';
+import { useTranslation } from 'react-i18next';
 
 // Enhanced skill data with actual logos and updated percentages
 const technicalSkills = [
@@ -97,6 +98,7 @@ const designSkills = [
 
 const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <motion.div
@@ -146,7 +148,7 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
                   rotate: 360,
                 }}
                 transition={{ 
-                  duration: 0.8,
+                  duration: 0.6,
                   ease: "easeInOut"
                 }}
                 onError={(e) => {
@@ -165,11 +167,11 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
           <p className="text-sm text-muted-foreground mb-4">{skill.description}</p>
           
           {/* Skill level bar */}
-          <div className="space-y-2">
-            <div className="flex justify-between text-sm">
-              <span>Proficiency</span>
-              <span className="font-medium">{skill.level}%</span>
-            </div>
+            <div className="space-y-2">
+              <div className="flex justify-between text-sm">
+                <span>{t('skills.proficiency')}</span>
+                <span className="font-medium">{skill.level}%</span>
+              </div>
             <div className="h-2 bg-muted rounded-full overflow-hidden">
               <motion.div
                 className="h-full rounded-full relative"
@@ -210,6 +212,8 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
 };
 
 export const Skills = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="skills" className="section-padding">
       <div className="container mx-auto">
@@ -227,7 +231,7 @@ export const Skills = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Skills & Expertise
+            {t('skills.title')}
           </motion.h2>
           <motion.p 
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
@@ -236,7 +240,7 @@ export const Skills = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            A comprehensive toolkit for creating exceptional digital experiences
+            {t('skills.description')}
           </motion.p>
         </motion.div>
 
@@ -256,7 +260,7 @@ export const Skills = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-2xl">💻</span>
-            Technical Skills
+            {t('skills.technical')}
           </motion.h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {technicalSkills.map((skill, index) => (
@@ -280,7 +284,7 @@ export const Skills = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-2xl">🎨</span>
-            Design Skills
+            {t('skills.design')}
           </motion.h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {designSkills.map((skill, index) => (

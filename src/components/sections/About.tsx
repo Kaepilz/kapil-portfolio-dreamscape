@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("about");
   
   return (
@@ -13,7 +15,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title">About Me</h2>
+          <h2 className="section-title">{t('about.title')}</h2>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mt-12">
@@ -61,26 +63,13 @@ const About = () => {
           <motion.div className="md:col-span-7 lg:col-span-8" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <Tabs defaultValue="about" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="grid grid-cols-3 mb-8">
-                <TabsTrigger value="about">About Me</TabsTrigger>
-                <TabsTrigger value="skills">Skills</TabsTrigger>
-                <TabsTrigger value="experience">Experience</TabsTrigger>
+                <TabsTrigger value="about">{t('about.tabs.about') || 'About Me'}</TabsTrigger>
+                <TabsTrigger value="skills">{t('about.tabs.skills') || 'Skills'}</TabsTrigger>
+                <TabsTrigger value="experience">{t('about.tabs.experience') || 'Experience'}</TabsTrigger>
               </TabsList>
               
               <TabsContent value="about" className="space-y-4">
-                <p>
-                  I'm a web developer with 1 year of experience, passionate about creating 
-                  functional websites and digital experiences. My journey in web development 
-                  is just beginning, and I'm eager to learn and grow in this exciting field.
-                </p>
-                <p>
-                  I specialize in building responsive websites using modern technologies. 
-                  Although I'm still developing my skills, I'm committed to creating clean, 
-                  user-friendly web applications.
-                </p>
-                <p>
-                  When I'm not coding, I enjoy exploring new technologies and looking for 
-                  opportunities to expand my skills.
-                </p>
+                <p>{t('about.description')}</p>
               </TabsContent>
               
               <TabsContent value="skills">

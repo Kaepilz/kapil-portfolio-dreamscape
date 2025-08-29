@@ -67,30 +67,32 @@ const roadmapData: RoadmapItem[] = [
 ];
 
 const StatusBadge = ({ status }: { status: RoadmapItem['status'] }) => {
+  const { t } = useTranslation();
+  
   const getStatusConfig = (status: RoadmapItem['status']) => {
     switch (status) {
       case 'completed':
         return { 
           icon: CheckCircle, 
-          label: 'Completed', 
+          label: t('roadmap.completed'), 
           className: 'bg-green-100 text-green-800 border-green-200 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800' 
         };
       case 'current':
         return { 
           icon: Star, 
-          label: 'Current', 
+          label: t('roadmap.current'), 
           className: 'bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-800' 
         };
       case 'in-progress':
         return { 
           icon: Clock, 
-          label: 'In Progress', 
+          label: t('roadmap.inProgress'), 
           className: 'bg-orange-100 text-orange-800 border-orange-200 dark:bg-orange-900/20 dark:text-orange-400 dark:border-orange-800' 
         };
       case 'future':
         return { 
           icon: Target, 
-          label: 'Future', 
+          label: t('roadmap.future'), 
           className: 'bg-gray-100 text-gray-800 border-gray-200 dark:bg-gray-900/20 dark:text-gray-400 dark:border-gray-800' 
         };
     }
@@ -168,7 +170,7 @@ export const Roadmap = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Learning Roadmap
+            {t('roadmap.title')}
           </motion.h2>
           <motion.p 
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
@@ -177,7 +179,7 @@ export const Roadmap = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            My journey of continuous learning and skill development in technology
+            {t('roadmap.description')}
           </motion.p>
         </motion.div>
 
@@ -214,8 +216,8 @@ export const Roadmap = () => {
                           <span className="font-medium">{item.category}</span>
                           {item.estimatedCompletion && (
                             <>
-                              <span>•</span>
-                              <span>Target: {item.estimatedCompletion}</span>
+                           <span>•</span>
+                              <span>{t('roadmap.target')}: {item.estimatedCompletion}</span>
                             </>
                           )}
                         </div>
@@ -229,7 +231,7 @@ export const Roadmap = () => {
                     {/* Skills */}
                     <div className="space-y-3">
                       <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wide">
-                        Key Technologies
+                        {t('roadmap.keyTechnologies')}
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {item.skills.map((skill, skillIndex) => (
@@ -251,7 +253,7 @@ export const Roadmap = () => {
                     {/* Progress bar */}
                     <div className="mt-4">
                       <div className="flex justify-between text-sm mb-2">
-                        <span className="text-muted-foreground">Overall Progress</span>
+                        <span className="text-muted-foreground">{t('roadmap.overallProgress')}</span>
                         <span className="font-medium">{item.progress}%</span>
                       </div>
                       <div className="h-2 bg-muted rounded-full overflow-hidden">
@@ -288,7 +290,7 @@ export const Roadmap = () => {
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            Let's Connect
+            {t('roadmap.letsConnect')}
           </motion.a>
         </motion.div>
       </div>

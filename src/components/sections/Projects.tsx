@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Filter } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const CATEGORIES = ["All", "Web Development", "UI/UX Design", "Brand Identity"];
+import { useTranslation } from 'react-i18next';
 
 type Project = {
   id: number;
@@ -77,7 +76,10 @@ const PROJECTS: Project[] = [
   },
 ];
 
+const CATEGORIES = ["All", "Web Development", "UI/UX Design", "Brand Identity"];
+
 const Projects = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("All");
   const [visibleProjects, setVisibleProjects] = useState(6);
 
@@ -98,10 +100,9 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title">My Projects</h2>
+          <h2 className="section-title">{t('projects.title')}</h2>
           <p className="text-muted-foreground max-w-2xl mb-12">
-            Check out some of my recent projects. Each project represents my dedication to 
-            creating beautiful and functional digital experiences.
+            {t('projects.subtitle')}
           </p>
         </motion.div>
         
@@ -133,7 +134,10 @@ const Projects = () => {
                   setVisibleProjects(6);
                 }}
               >
-                {category}
+                {category === "All" ? t('projects.categories.all') :
+                 category === "Web Development" ? t('projects.categories.web') :
+                 category === "UI/UX Design" ? t('projects.categories.design') :
+                 category === "Brand Identity" ? t('projects.categories.brand') : category}
               </Button>
             </motion.div>
           ))}
@@ -222,7 +226,7 @@ const Projects = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        Live Demo <ExternalLink className="w-3 h-3 ml-1" />
+                        {t('projects.viewLive')} <ExternalLink className="w-3 h-3 ml-1" />
                       </motion.a>
                     )}
                     {project.githubUrl && (
@@ -234,7 +238,7 @@ const Projects = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        Code <Github className="w-3 h-3 ml-1" />
+                        {t('projects.viewCode')} <Github className="w-3 h-3 ml-1" />
                       </motion.a>
                     )}
                   </motion.div>
@@ -269,7 +273,7 @@ const Projects = () => {
                 onClick={handleShowMore}
                 className="bg-kapil-red hover:bg-kapil-red/90 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Load More Projects
+                {t('projects.loadMore')}
               </Button>
             </motion.div>
           </motion.div>

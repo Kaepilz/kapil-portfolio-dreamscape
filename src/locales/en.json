@@ -71,19 +71,27 @@
     }
   },
   "services": {
-    "title": "Services",
-    "subtitle": "What I can do for you",
+    "title": "My Services",
+    "description": "Comprehensive digital solutions tailored to help your business grow and succeed in the modern digital landscape.",
     "webDev": {
       "title": "Web Development",
-      "description": "Modern, responsive websites built with the latest technologies and best practices."
+      "description": "Custom website development with modern technologies, ensuring fast, responsive, and user-friendly experiences."
     },
     "uiux": {
       "title": "UI/UX Design",
-      "description": "User-centered design that creates intuitive and engaging digital experiences."
+      "description": "Creative and intuitive user interface designs that enhance user experience and increase engagement."
     },
-    "mobile": {
-      "title": "Mobile Development",
-      "description": "Cross-platform mobile applications that work seamlessly across all devices."
+    "brandIdentity": {
+      "title": "Brand Identity",
+      "description": "Cohesive brand identity development including logos, color schemes, and design systems for digital platforms."
+    },
+    "mobileFirst": {
+      "title": "Mobile-First Design",
+      "description": "Mobile-first approach ensuring your website looks and functions perfectly on all devices and screen sizes."
     }
+  },
+  "footer": {
+    "description": "A passionate web developer and designer creating digital experiences that make a difference.",
+    "allRightsReserved": "All rights reserved."
   }
 }

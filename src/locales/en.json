@@ -1,89 +1,165 @@
-
 {
   "nav": {
     "home": "Home",
     "about": "About",
+    "skills": "Skills",
     "services": "Services",
     "projects": "Projects",
     "contact": "Contact"
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "Kapil Niure",
-    "title": "Full-Stack Developer & UI/UX Designer",
-    "description": "16-year-old passionate developer from Tokyo, creating beautiful and functional digital experiences with modern technologies.",
-    "cta": {
-      "projects": "View My Work",
-      "contact": "Get In Touch"
-    }
+    "name": "Kapil",
+    "title": "Web Developer & Designer",
+    "description": "I craft beautiful, functional websites and digital experiences that help businesses grow and succeed in the digital world. Let's build something amazing together.",
+    "viewWork": "View My Work",
+    "contactMe": "Contact Me",
+    "resume": "Resume",
+    "discoverMore": "Discover More"
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Passionate developer with a vision for the future",
-    "description": "I'm a 16-year-old developer studying at Nerima Technical High School in Tokyo. With a passion for both coding and design, I create digital solutions that combine functionality with beautiful user experiences.",
+    "subtitle": "Passionate developer from Tokyo",
+    "description": "I'm a web developer with 1 year of experience, passionate about creating functional websites and digital experiences. My journey in web development is just beginning, and I'm eager to learn and grow in this exciting field.",
+    "description2": "I specialize in building responsive websites using modern technologies. Although I'm still developing my skills, I'm committed to creating clean, user-friendly web applications.",
+    "description3": "When I'm not coding, I enjoy exploring new technologies and looking for opportunities to expand my skills.",
+    "skillsIntegrated": "Skills section integrated into main portfolio",
     "stats": {
-      "experience": "2+ Years Experience",
-      "projects": "15+ Projects Completed",
-      "technologies": "10+ Technologies Mastered",
-      "availability": "Available for Projects"
+      "name": "Name",
+      "email": "Email", 
+      "location": "Location",
+      "experience": "Experience",
+      "availability": "Availability",
+      "availabilityValue": "Open to Work",
+      "languages": "Languages",
+      "languagesValue": "English (fluent), Nepali (native), Japanese (conversational)",
+      "projectsCompleted": "Projects Completed",
+      "yearsExperience": "Years Learning",
+      "happyClients": "Happy Clients",
+      "linesOfCode": "Lines of Code"
+    },
+    "tabs": {
+      "about": "About Me",
+      "skills": "Skills",
+      "experience": "Experience",
+      "education": "Education"
+    },
+    "experience": {
+      "title": "Junior Web Developer",
+      "period": "First Professional Role (2023 - Present)",
+      "description": "Developing web applications, learning modern frontend technologies, and gaining hands-on experience in web development."
     }
   },
   "skills": {
     "title": "Skills & Expertise",
-    "subtitle": "A comprehensive toolkit for creating exceptional digital experiences",
-    "technical": "Technical Skills",
-    "design": "Design Skills",
-    "proficiency": "Proficiency"
-  },
-  "projects": {
-    "title": "My Projects",
-    "subtitle": "Check out some of my recent projects. Each project represents my dedication to creating beautiful and functional digital experiences.",
+    "description": "A comprehensive toolkit for creating exceptional digital experiences",
+    "getInTouch": "Get in Touch",
     "categories": {
       "all": "All",
-      "web": "Web Development",
-      "design": "UI/UX Design",
-      "brand": "Brand Identity"
-    },
-    "loadMore": "Load More Projects",
-    "viewLive": "Live Demo",
-    "viewCode": "View Code"
-  },
-  "contact": {
-    "title": "Let's Work Together",
-    "subtitle": "Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.",
-    "getInTouch": "Get in Touch",
-    "followMe": "Follow Me",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "subject": "Subject",
-      "message": "Message",
-      "namePlaceholder": "Your full name",
-      "emailPlaceholder": "your.email@example.com",
-      "subjectPlaceholder": "What's this about?",
-      "messagePlaceholder": "Tell me about your project or idea...",
-      "send": "Send Message",
-      "sending": "Sending...",
-      "success": "Message sent successfully!",
-      "successDescription": "Thank you for your message. I'll get back to you soon.",
-      "error": "Error sending message",
-      "errorDescription": "Please try again or contact me directly via email."
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "design": "Design",
+      "tools": "Tools"
     }
   },
   "services": {
-    "title": "Services",
-    "subtitle": "What I can do for you",
-    "webDev": {
+    "title": "My Services",
+    "description": "Comprehensive digital solutions tailored to help your business grow and succeed in the modern digital landscape.",
+    "webDevelopment": {
       "title": "Web Development",
-      "description": "Modern, responsive websites built with the latest technologies and best practices."
+      "description": "Custom websites and web applications built with modern technologies and best practices."
     },
-    "uiux": {
+    "uiuxDesign": {
       "title": "UI/UX Design",
-      "description": "User-centered design that creates intuitive and engaging digital experiences."
+      "description": "User-centered design solutions that create engaging and intuitive digital experiences."
     },
-    "mobile": {
-      "title": "Mobile Development",
-      "description": "Cross-platform mobile applications that work seamlessly across all devices."
+    "mobileFirst": {
+      "title": "Mobile-First Design",
+      "description": "Responsive designs that work perfectly across all devices and screen sizes."
+    },
+    "brandIdentity": {
+      "title": "Brand Identity",
+      "description": "Complete branding packages including logos, color schemes, and visual identity systems."
     }
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Check out some of my recent projects. Each project represents my dedication to creating beautiful and functional digital experiences.",
+    "viewDemo": "View Demo",
+    "viewCode": "View Code",
+    "loadMore": "Load More Projects",
+    "categories": {
+      "all": "All",
+      "webDevelopment": "Web Development",
+      "uiuxDesign": "UI/UX Design",
+      "brandIdentity": "Brand Identity"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Have a project in mind or want to collaborate? Feel free to reach out to me through the contact form or using the information below.",
+    "downloadResume": "Download Resume",
+    "contactInfo": "Contact Information",
+    "contactDescription": "Feel free to reach out using any of these methods",
+    "location": "Location",
+    "email": "Email",
+    "phone": "Phone",
+    "connect": "Let's Connect",
+    "socialDescription": "Follow me on social media for updates",
+    "sendMessage": "Send Me a Message",
+    "formDescription": "Fill out the form below and I'll get back to you as soon as possible.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send Message",
+      "sending": "Sending..."
+    }
+  },
+  "footer": {
+    "description": "Web Developer & Designer",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "followMe": "Follow Me",
+    "allRightsReserved": "All rights reserved."
+  },
+  "messages": {
+    "messageSent": "Message Sent!",
+    "messageDescription": "Thank you for your message. I'll get back to you soon."
+  },
+  "roadmap": {
+    "title": "Learning Roadmap",
+    "description": "My journey of continuous learning and skill development in technology",
+    "current": "Current",
+    "inProgress": "In Progress",
+    "future": "Future",
+    "completed": "Completed",
+    "keyTechnologies": "Key Technologies",
+    "overallProgress": "Overall Progress",
+    "target": "Target",
+    "letsConnect": "Let's Connect"
+  },
+  "feedback": {
+    "title": "Share Your Feedback",
+    "description": "Your feedback helps me improve and grow. I'd love to hear your thoughts about my work, skills, or potential collaboration opportunities.",
+    "name": "Name",
+    "email": "Email (Optional)",
+    "rating": "Overall Rating (Optional)",
+    "category": "Feedback Category",
+    "message": "Your Message",
+    "messagePlaceholder": "Share your thoughts, suggestions, or feedback...",
+    "send": "Send Feedback",
+    "sending": "Submitting...",
+    "categories": {
+      "general": "General Feedback",
+      "design": "Design & UI/UX", 
+      "technical": "Technical Skills",
+      "collaboration": "Collaboration"
+    },
+    "whyMatters": "Why Your Feedback Matters",
+    "whatNext": "What Happens Next?"
   }
 }

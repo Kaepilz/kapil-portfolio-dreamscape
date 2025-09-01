@@ -3,6 +3,7 @@ import { useState, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { SvgLogo } from '../icons/SvgLogo';
+import { useTranslation } from 'react-i18next';
 
 // Enhanced skill data with actual logos and updated percentages
 const technicalSkills = [
@@ -132,10 +133,9 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
             <motion.div 
               className="w-16 h-16 relative group-hover:scale-110 transition-transform duration-300"
               whileHover={{ 
-                rotateY: 360,
                 scale: 1.1,
               }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <motion.img 
                 src={skill.logo} 
@@ -143,7 +143,7 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
                 className="w-full h-full object-contain filter drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300"
                 style={{ filter: `drop-shadow(0 4px 8px ${skill.color}40)` }}
                 whileHover={{
-                  rotate: 360,
+                  rotate: -360, // Counterclockwise rotation (right to left when viewing from top)
                 }}
                 transition={{ 
                   duration: 0.8,
@@ -210,6 +210,8 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
 };
 
 export const Skills = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="skills" className="section-padding">
       <div className="container mx-auto">
@@ -227,7 +229,7 @@ export const Skills = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Skills & Expertise
+            {t('skills.title')}
           </motion.h2>
           <motion.p 
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
@@ -236,7 +238,7 @@ export const Skills = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            A comprehensive toolkit for creating exceptional digital experiences
+            {t('skills.description')}
           </motion.p>
         </motion.div>
 

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("about");
   
   return (
@@ -13,7 +15,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title">About Me</h2>
+          <h2 className="section-title">{t('about.title')}</h2>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mt-12">
@@ -34,12 +36,12 @@ const About = () => {
             
             <div className="space-y-4">
               {[
-                { label: "Name", value: "Kapil Niure" },
-                { label: "Email", value: "kapilniure4@gmail.com" },
-                { label: "Location", value: "Kiyose, Tokyo" },
-                { label: "Experience", value: "1 Year" },
-                { label: "Availability", value: "Open to Work", isGreen: true },
-                { label: "Languages", value: "English (fluent), Nepali (native), Japanese (conversational)" },
+                { label: t('about.stats.name'), value: "Kapil Niure" },
+                { label: t('about.stats.email'), value: "kapilniure4@gmail.com" },
+                { label: t('about.stats.location'), value: "Kiyose, Tokyo" },
+                { label: t('about.stats.experience'), value: "1 Year" },
+                { label: t('about.stats.availability'), value: t('about.stats.availabilityValue'), isGreen: true },
+                { label: t('about.stats.languages'), value: t('about.stats.languagesValue') },
               ].map((item, index) => (
                 <motion.div
                   key={item.label}
@@ -61,31 +63,26 @@ const About = () => {
           <motion.div className="md:col-span-7 lg:col-span-8" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <Tabs defaultValue="about" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="grid grid-cols-3 mb-8">
-                <TabsTrigger value="about">About Me</TabsTrigger>
-                <TabsTrigger value="skills">Skills</TabsTrigger>
-                <TabsTrigger value="experience">Experience</TabsTrigger>
+                <TabsTrigger value="about">{t('about.tabs.about')}</TabsTrigger>
+                <TabsTrigger value="skills">{t('about.tabs.skills')}</TabsTrigger>
+                <TabsTrigger value="experience">{t('about.tabs.experience')}</TabsTrigger>
               </TabsList>
               
               <TabsContent value="about" className="space-y-4">
                 <p>
-                  I'm a web developer with 1 year of experience, passionate about creating 
-                  functional websites and digital experiences. My journey in web development 
-                  is just beginning, and I'm eager to learn and grow in this exciting field.
+                  {t('about.description')}
                 </p>
                 <p>
-                  I specialize in building responsive websites using modern technologies. 
-                  Although I'm still developing my skills, I'm committed to creating clean, 
-                  user-friendly web applications.
+                  {t('about.description2')}
                 </p>
                 <p>
-                  When I'm not coding, I enjoy exploring new technologies and looking for 
-                  opportunities to expand my skills.
+                  {t('about.description3')}
                 </p>
               </TabsContent>
               
               <TabsContent value="skills">
                 <div className="text-center py-8">
-                  <p className="text-muted-foreground">Skills section integrated into main portfolio</p>
+                  <p className="text-muted-foreground">{t('about.skillsIntegrated')}</p>
                 </div>
               </TabsContent>
               
@@ -104,11 +101,10 @@ const About = () => {
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 }}
                     />
-                    <h3 className="text-lg font-medium">Junior Web Developer</h3>
-                    <p className="text-primary">First Professional Role (2023 - Present)</p>
+                    <h3 className="text-lg font-medium">{t('about.experience.title')}</h3>
+                    <p className="text-primary">{t('about.experience.period')}</p>
                     <p className="mt-2 text-muted-foreground">
-                      Developing web applications, learning modern frontend technologies, 
-                      and gaining hands-on experience in web development.
+                      {t('about.experience.description')}
                     </p>
                   </motion.div>
                 </div>

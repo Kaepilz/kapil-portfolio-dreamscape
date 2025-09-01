@@ -1,7 +1,9 @@
 
-import { Github, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Github, Twitter, Linkedin, Instagram, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -14,43 +16,40 @@ const Footer = () => {
               <span className="text-kapil-red">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              Web Developer & Designer
+              {t('footer.description')}
             </p>
           </div>
           
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a 
-              href="#" 
+              href="https://github.com/Kaepilz" 
               className="text-muted-foreground hover:text-kapil-red transition-colors"
               aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Github className="w-5 h-5" />
             </a>
             <a 
-              href="#" 
-              className="text-muted-foreground hover:text-kapil-red transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a 
-              href="#" 
+              href="https://www.linkedin.com/in/kapil-niure" 
               className="text-muted-foreground hover:text-kapil-red transition-colors"
               aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="#" 
+              href="mailto:kapilniure4@gmail.com" 
               className="text-muted-foreground hover:text-kapil-red transition-colors"
-              aria-label="Instagram"
+              aria-label="Email"
             >
-              <Instagram className="w-5 h-5" />
+              <Mail className="w-5 h-5" />
             </a>
           </div>
           
           <div className="text-sm text-muted-foreground">
-            © {currentYear} All Rights Reserved
+            © {currentYear} {t('footer.allRightsReserved')}
           </div>
         </div>
       </div>

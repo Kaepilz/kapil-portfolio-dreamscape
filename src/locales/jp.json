@@ -1,89 +1,165 @@
-
 {
   "nav": {
     "home": "ホーム",
     "about": "私について",
+    "skills": "スキル",
     "services": "サービス",
     "projects": "プロジェクト",
     "contact": "お問い合わせ"
   },
   "hero": {
-    "greeting": "こんにちは、私は",
-    "name": "ニウレ カピル",
-    "title": "フルスタック開発者・UI/UXデザイナー",
-    "description": "東京在住の16歳の情熱的な開発者として、モダンな技術で美しく機能的なデジタル体験を創造しています。",
-    "cta": {
-      "projects": "作品を見る",
-      "contact": "お問い合わせ"
-    }
+    "greeting": "こんにちは、",
+    "name": "カピルです",
+    "title": "ウェブ開発者 & デザイナー",
+    "description": "美しく機能的なウェブサイトとデジタル体験を制作し、ビジネスの成長とデジタル世界での成功をサポートします。一緒に素晴らしいものを作りましょう。",
+    "viewWork": "作品を見る",
+    "contactMe": "お問い合わせ",
+    "resume": "履歴書",
+    "discoverMore": "もっと見る"
   },
   "about": {
     "title": "私について",
-    "subtitle": "未来への展望を持つ情熱的な開発者",
-    "description": "私は東京の練馬工業高等学校に通う16歳の開発者です。コーディングとデザインの両方に情熱を持ち、機能性と美しいユーザーエクスペリエンスを組み合わせたデジタルソリューションを作成しています。",
+    "subtitle": "東京出身の情熱的な開発者",
+    "description": "私は1年の経験を持つウェブ開発者で、機能的なウェブサイトやデジタル体験の制作に情熱を注いでいます。ウェブ開発の旅はまだ始まったばかりですが、この刺激的な分野で学び成長することを切望しています。",
+    "description2": "私はモダンな技術を使用してレスポンシブなウェブサイトを構築することを専門としています。まだスキルを伸ばしている段階ですが、クリーンでユーザーフレンドリーなウェブアプリケーションを作ることにコミットしています。",
+    "description3": "コーディングをしていない時は、新しい技術を探求し、スキルを拡張する機会を探しています。",
+    "skillsIntegrated": "スキルセクションはメインポートフォリオに統合されています",
     "stats": {
-      "experience": "2年以上の経験",
-      "projects": "15以上のプロジェクト完了",
-      "technologies": "10以上の技術習得",
-      "availability": "プロジェクト受付中"
+      "name": "名前",
+      "email": "メール",
+      "location": "所在地",
+      "experience": "経験",
+      "availability": "稼働状況",
+      "availabilityValue": "お仕事をお受けできます",
+      "languages": "言語",
+      "languagesValue": "英語（流暢）、ネパール語（母国語）、日本語（会話レベル）",
+      "projectsCompleted": "完成プロジェクト",
+      "yearsExperience": "学習年数",
+      "happyClients": "満足したクライアント",
+      "linesOfCode": "コード行数"
+    },
+    "tabs": {
+      "about": "私について",
+      "skills": "スキル",
+      "experience": "経験",
+      "education": "教育"
+    },
+    "experience": {
+      "title": "ジュニアウェブ開発者",
+      "period": "初めての職業的役割（2023年 - 現在）",
+      "description": "ウェブアプリケーションの開発、モダンなフロントエンド技術の学習、そしてウェブ開発における実践的な経験を積んでいます。"
     }
   },
   "skills": {
     "title": "スキルと専門知識",
-    "subtitle": "優れたデジタル体験を創造するための包括的なツールキット",
-    "technical": "技術スキル",
-    "design": "デザインスキル",
-    "proficiency": "習熟度"
+    "description": "優れたデジタル体験を創造するための包括的なツールキット",
+    "getInTouch": "お問い合わせ",
+    "categories": {
+      "all": "全て",
+      "frontend": "フロントエンド",
+      "backend": "バックエンド",
+      "design": "デザイン",
+      "tools": "ツール"
+    }
+  },
+  "services": {
+    "title": "サービス",
+    "description": "現代のデジタル環境でビジネスの成長と成功を支援するための包括的なデジタルソリューション。",
+    "webDevelopment": {
+      "title": "ウェブ開発",
+      "description": "モダンな技術とベストプラクティスで構築されたカスタムウェブサイトとウェブアプリケーション。"
+    },
+    "uiuxDesign": {
+      "title": "UI/UXデザイン",
+      "description": "魅力的で直感的なデジタル体験を創造するユーザー中心のデザインソリューション。"
+    },
+    "mobileFirst": {
+      "title": "モバイルファーストデザイン",
+      "description": "あらゆるデバイスと画面サイズで完璧に動作するレスポンシブデザイン。"
+    },
+    "brandIdentity": {
+      "title": "ブランドアイデンティティ",
+      "description": "ロゴ、カラースキーム、ビジュアルアイデンティティシステムを含む完全なブランディングパッケージ。"
+    }
   },
   "projects": {
-    "title": "私のプロジェクト",
-    "subtitle": "最近のプロジェクトをご覧ください。各プロジェクトは美しく機能的なデジタル体験を創造することへの私の献身を表しています。",
+    "title": "プロジェクト",
+    "description": "最近のプロジェクトをご覧ください。各プロジェクトは、美しく機能的なデジタル体験を創造することへの私の献身を表しています。",
+    "viewDemo": "デモを見る",
+    "viewCode": "コードを見る",
+    "loadMore": "もっとプロジェクトを読み込む",
     "categories": {
-      "all": "すべて",
-      "web": "ウェブ開発",
-      "design": "UI/UXデザイン",
-      "brand": "ブランドアイデンティティ"
-    },
-    "loadMore": "さらに読み込む",
-    "viewLive": "ライブデモ",
-    "viewCode": "コードを見る"
+      "all": "全て",
+      "webDevelopment": "ウェブ開発",
+      "uiuxDesign": "UI/UXデザイン",
+      "brandIdentity": "ブランドアイデンティティ"
+    }
   },
   "contact": {
-    "title": "一緒に働きましょう",
-    "subtitle": "あなたのアイデアを実現する準備はできていますか？次のプロジェクトについて話し合い、一緒に素晴らしいものを作りましょう。",
-    "getInTouch": "お問い合わせ",
-    "followMe": "フォローする",
+    "title": "お問い合わせ",
+    "description": "プロジェクトのアイデアがありますか？コラボレーションをお考えですか？お気軽に下記のフォームまたは連絡先からお問い合わせください。",
+    "downloadResume": "履歴書をダウンロード",
+    "contactInfo": "連絡先情報",
+    "contactDescription": "どの方法でもお気軽にお問い合わせください",
+    "location": "所在地",
+    "email": "メール",
+    "phone": "電話",
+    "connect": "つながりましょう",
+    "socialDescription": "最新情報はソーシャルメディアでフォローしてください",
+    "sendMessage": "メッセージを送る",
+    "formDescription": "下記のフォームに記入していただければ、できるだけ早くお返事いたします。",
     "form": {
       "name": "お名前",
       "email": "メールアドレス",
       "subject": "件名",
       "message": "メッセージ",
-      "namePlaceholder": "お名前をご入力ください",
-      "emailPlaceholder": "your.email@example.com",
-      "subjectPlaceholder": "どのようなご用件でしょうか？",
-      "messagePlaceholder": "プロジェクトやアイデアについて教えてください...",
+      "messagePlaceholder": "プロジェクトについて教えてください...",
       "send": "メッセージを送信",
-      "sending": "送信中...",
-      "success": "メッセージが正常に送信されました！",
-      "successDescription": "メッセージをありがとうございます。すぐにご返信いたします。",
-      "error": "メッセージの送信エラー",
-      "errorDescription": "もう一度お試しいただくか、メールで直接お問い合わせください。"
+      "sending": "送信中..."
     }
   },
-  "services": {
-    "title": "サービス",
-    "subtitle": "私ができること",
-    "webDev": {
-      "title": "ウェブ開発",
-      "description": "最新技術とベストプラクティスで構築されたモダンでレスポンシブなウェブサイト。"
+  "footer": {
+    "description": "ウェブ開発者 & デザイナー",
+    "quickLinks": "クイックリンク",
+    "services": "サービス",
+    "contact": "お問い合わせ",
+    "followMe": "フォローする",
+    "allRightsReserved": "全著作権所有。"
+  },
+  "messages": {
+    "messageSent": "メッセージが送信されました！",
+    "messageDescription": "メッセージをありがとうございます。すぐにお返事いたします。"
+  },
+  "roadmap": {
+    "title": "学習ロードマップ",
+    "description": "技術における継続的な学習とスキル開発の旅",
+    "current": "現在",
+    "inProgress": "進行中",
+    "future": "将来",
+    "completed": "完了",
+    "keyTechnologies": "主要技術",
+    "overallProgress": "全体的な進捗",
+    "target": "目標",
+    "letsConnect": "つながりましょう"
+  },
+  "feedback": {
+    "title": "フィードバックをお聞かせください",
+    "description": "あなたのフィードバックは私の成長と改善に役立ちます。私の仕事、スキル、またはコラボレーションの機会についてお聞かせください。",
+    "name": "お名前",
+    "email": "メールアドレス（任意）",
+    "rating": "総合評価（任意）",
+    "category": "フィードバックカテゴリ",
+    "message": "メッセージ",
+    "messagePlaceholder": "ご意見、提案、フィードバックをお聞かせください...",
+    "send": "フィードバックを送信",
+    "sending": "送信中...",
+    "categories": {
+      "general": "一般的なフィードバック",
+      "design": "デザイン & UI/UX",
+      "technical": "技術スキル",
+      "collaboration": "コラボレーション"
     },
-    "uiux": {
-      "title": "UI/UXデザイン",
-      "description": "直感的で魅力的なデジタル体験を創造するユーザー中心のデザイン。"
-    },
-    "mobile": {
-      "title": "モバイル開発",
-      "description": "すべてのデバイスでシームレスに動作するクロスプラットフォームモバイルアプリケーション。"
-    }
+    "whyMatters": "フィードバックが重要な理由",
+    "whatNext": "次に何が起こりますか？"
   }
 }

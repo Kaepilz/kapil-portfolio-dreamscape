@@ -34,30 +34,6 @@ const About = () => {
               </div>
             </div>
             
-            <div className="space-y-4">
-              {[
-                { label: t('about.stats.name'), value: "Kapil Niure" },
-                { label: t('about.stats.email'), value: "kapilniure4@gmail.com" },
-                { label: t('about.stats.location'), value: "Kiyose, Tokyo" },
-                { label: t('about.stats.experience'), value: "1 Year" },
-                { label: t('about.stats.availability'), value: t('about.stats.availabilityValue'), isGreen: true },
-                { label: t('about.stats.languages'), value: t('about.stats.languagesValue') },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.label}
-                  className="flex justify-between"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <span className="text-muted-foreground">{item.label}:</span>
-                  <span className={`font-medium ${item.isGreen ? 'text-green-500' : ''}`}>
-                    {item.value}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
           
           <motion.div className="md:col-span-7 lg:col-span-8" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>

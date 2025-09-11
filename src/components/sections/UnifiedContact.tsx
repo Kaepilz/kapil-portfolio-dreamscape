@@ -208,8 +208,8 @@ export const UnifiedContact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/Kaepilz", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/kapil-niure", label: "LinkedIn" },
     { icon: Instagram, href: "#", label: "Instagram" }
   ];
 

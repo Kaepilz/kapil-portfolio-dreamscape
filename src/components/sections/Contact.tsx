@@ -159,9 +159,9 @@ const Contact = () => {
                 <CardContent>
                   <div className="flex space-x-4">
                     {[
-                      { icon: Github, href: "#", label: "GitHub" },
+                      { icon: Github, href: "https://github.com/Kaepilz", label: "GitHub" },
                       { icon: Twitter, href: "#", label: "Twitter" },
-                      { icon: Linkedin, href: "#", label: "LinkedIn" },
+                      { icon: Linkedin, href: "https://www.linkedin.com/in/kapil-niure", label: "LinkedIn" },
                       { icon: Instagram, href: "#", label: "Instagram" }
                     ].map((social, index) => (
                       <motion.a

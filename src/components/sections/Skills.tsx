@@ -131,11 +131,16 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-3">
             <motion.div 
-              className="w-16 h-16 relative group-hover:scale-110 transition-transform duration-300"
+              className="w-16 h-16 relative group-hover:scale-110 transition-transform duration-500"
               whileHover={{ 
-                scale: 1.1,
+                rotateZ: -360,
+                scale: 1.15,
+                transition: { 
+                  duration: 0.8, 
+                  ease: "easeInOut",
+                  scale: { duration: 0.3 }
+                }
               }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <motion.img 
                 src={skill.logo} 

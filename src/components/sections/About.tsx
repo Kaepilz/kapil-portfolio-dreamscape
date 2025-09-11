@@ -34,6 +34,25 @@ const About = () => {
               </div>
             </div>
             
+            {/* Bio Section */}
+            <div className="space-y-4">
+              <div className="p-4 bg-card rounded-lg border">
+                <h4 className="font-semibold mb-2">{t('about.bio.title')}</h4>
+                <p className="text-sm text-muted-foreground">
+                  {t('about.bio.description')}
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div>
+                  <span className="font-medium">{t('about.bio.location')}</span>
+                  <p className="text-muted-foreground">Tokyo, Japan</p>
+                </div>
+                <div>
+                  <span className="font-medium">{t('about.bio.status')}</span>
+                  <p className="text-muted-foreground">{t('about.bio.available')}</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
           
           <motion.div className="md:col-span-7 lg:col-span-8" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
@@ -47,12 +66,6 @@ const About = () => {
               <TabsContent value="about" className="space-y-4">
                 <p>
                   {t('about.description')}
-                </p>
-                <p>
-                  {t('about.description2')}
-                </p>
-                <p>
-                  {t('about.description3')}
                 </p>
               </TabsContent>
               

@@ -20,9 +20,14 @@
   "about": {
     "title": "About Me",
     "subtitle": "Passionate developer from Tokyo",
-    "description": "I'm a passionate web developer based in Tokyo, dedicated to creating beautiful and functional digital experiences. I combine creativity with technical expertise to build modern, responsive websites that meet both user needs and business goals.",
-    "description2": "My focus is on clean, efficient code and user-centered design. I enjoy working with the latest web technologies including React, TypeScript, and modern CSS frameworks to deliver high-quality solutions.",
-    "description3": "I'm always eager to take on new challenges and collaborate on exciting projects. Whether it's a simple website or a complex web application, I bring enthusiasm and attention to detail to every project.",
+    "description": "I'm a passionate web developer based in Tokyo, dedicated to creating beautiful and functional digital experiences. I combine creativity with technical expertise to build modern, responsive websites that meet both user needs and business goals. My focus is on clean, efficient code and user-centered design, working with the latest web technologies including React, TypeScript, and modern CSS frameworks to deliver high-quality solutions.",
+    "bio": {
+      "title": "Quick Info",
+      "description": "Passionate about creating digital experiences that make a difference.",
+      "location": "Location",
+      "status": "Status", 
+      "available": "Available for Work"
+    },
     "skillsIntegrated": "Skills section integrated into main portfolio",
     "stats": {
       "name": "Name",

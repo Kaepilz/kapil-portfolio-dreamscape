@@ -17,43 +17,34 @@
     "resume": "Resume",
     "discoverMore": "Discover More"
   },
-  "about": {
-    "title": "About Me",
-    "subtitle": "Passionate developer from Tokyo",
-    "description": "I'm a passionate web developer based in Tokyo, dedicated to creating beautiful and functional digital experiences. I combine creativity with technical expertise to build modern, responsive websites that meet both user needs and business goals. My focus is on clean, efficient code and user-centered design, working with the latest web technologies including React, TypeScript, and modern CSS frameworks to deliver high-quality solutions.",
-    "bio": {
-      "title": "Quick Info",
-      "description": "Passionate about creating digital experiences that make a difference.",
-      "location": "Location",
-      "status": "Status", 
-      "available": "Available for Work"
-    },
-    "skillsIntegrated": "Skills section integrated into main portfolio",
-    "stats": {
-      "name": "Name",
-      "email": "Email", 
-      "location": "Location",
-      "experience": "Experience",
-      "availability": "Availability",
-      "availabilityValue": "Open to Work",
-      "languages": "Languages",
-      "languagesValue": "English (fluent), Nepali (native), Japanese (conversational)",
-      "projectsCompleted": "Projects Completed",
-      "yearsExperience": "Years Learning",
-      "happyClients": "Happy Clients",
-      "linesOfCode": "Lines of Code"
-    },
-    "tabs": {
-      "about": "About Me",
-      "skills": "Skills",
-      "experience": "Experience",
-      "education": "Education"
-    },
-    "experience": {
-      "title": "Junior Web Developer",
-      "period": "First Professional Role (2023 - Present)",
-      "description": "Developing web applications, learning modern frontend technologies, and gaining hands-on experience in web development."
-    }
+  "title": "About Me",
+  "subtitle": "Passionate developer from Tokyo",
+  "description": "I'm a passionate web developer based in Tokyo, dedicated to creating beautiful and functional digital experiences. I combine creativity with technical expertise to build modern, responsive websites that meet both user needs and business goals. My focus is on clean, efficient code and user-centered design, working with the latest web technologies including React, TypeScript, and modern CSS frameworks to deliver high-quality solutions.",
+  "skillsIntegrated": "Skills section integrated into main portfolio",
+  "stats": {
+    "name": "Name",
+    "email": "Email", 
+    "location": "Location",
+    "experience": "Experience",
+    "availability": "Availability",
+    "availabilityValue": "Open to Work",
+    "languages": "Languages",
+    "languagesValue": "English (fluent), Nepali (native), Japanese (conversational)",
+    "projectsCompleted": "Projects Completed",
+    "yearsExperience": "Years Learning",
+    "happyClients": "Happy Clients",
+    "linesOfCode": "Lines of Code"
+  },
+  "tabs": {
+    "about": "About Me",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education"
+  },
+  "experience": {
+    "title": "Junior Web Developer",
+    "period": "First Professional Role (2023 - Present)",
+    "description": "Developing web applications, learning modern frontend technologies, and gaining hands-on experience in web development."
   },
   "skills": {
     "title": "Skills & Expertise",

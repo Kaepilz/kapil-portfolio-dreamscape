@@ -18,7 +18,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">{t('about.title')}</h2>
+          <h2 className="section-title">{t('title')}</h2>
         </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12">
@@ -62,23 +62,22 @@ const About = () => {
               </div>
               
               <CardContent className="p-6 space-y-4">
-                {/* Bio Card */}
-                <motion.div 
-                  className="p-4 bg-primary/5 rounded-lg border border-primary/10"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <h4 className="font-semibold mb-2 text-primary flex items-center gap-2">
-                    <Coffee className="w-4 h-4" />
-                    {t('about.bio.title')}
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t('about.bio.description')}
-                  </p>
-                </motion.div>
-                
-                {/* Quick Info Grid */}
+                {/* Personal Info Grid */}
                 <div className="grid grid-cols-1 gap-3 text-sm">
+                  <motion.div 
+                    className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xs font-bold text-primary">K</span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">{t('stats.name')}</span>
+                      <p className="text-muted-foreground">Kapil Niure</p>
+                    </div>
+                  </motion.div>
+                  
                   <motion.div 
                     className="flex items-center gap-3 p-3 rounded-lg bg-accent/5 border border-accent/10"
                     whileHover={{ x: 5 }}
@@ -86,8 +85,20 @@ const About = () => {
                   >
                     <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
                     <div>
-                      <span className="font-medium text-foreground">{t('about.bio.location')}</span>
+                      <span className="font-medium text-foreground">{t('stats.location')}</span>
                       <p className="text-muted-foreground">Tokyo, Japan</p>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="flex items-center gap-3 p-3 rounded-lg bg-blue-500/5 border border-blue-500/10"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="w-4 h-4 rounded-full bg-blue-500 flex-shrink-0" />
+                    <div>
+                      <span className="font-medium text-foreground">{t('stats.languages')}</span>
+                      <p className="text-muted-foreground text-xs">{t('stats.languagesValue')}</p>
                     </div>
                   </motion.div>
                   
@@ -98,8 +109,8 @@ const About = () => {
                   >
                     <Code className="w-4 h-4 text-green-500 flex-shrink-0" />
                     <div>
-                      <span className="font-medium text-foreground">{t('about.bio.status')}</span>
-                      <p className="text-green-600 dark:text-green-400 font-medium">{t('about.bio.available')}</p>
+                      <span className="font-medium text-foreground">{t('stats.availability')}</span>
+                      <p className="text-green-600 dark:text-green-400 font-medium">{t('stats.availabilityValue')}</p>
                     </div>
                   </motion.div>
                 </div>
@@ -120,13 +131,13 @@ const About = () => {
                 <Tabs defaultValue="about" value={activeTab} onValueChange={setActiveTab}>
                   <TabsList className="grid grid-cols-3 mb-8 bg-muted/50">
                     <TabsTrigger value="about" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                      {t('about.tabs.about')}
+                      {t('tabs.about')}
                     </TabsTrigger>
                     <TabsTrigger value="skills" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                      {t('about.tabs.skills')}
+                      {t('tabs.skills')}
                     </TabsTrigger>
                     <TabsTrigger value="experience" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                      {t('about.tabs.experience')}
+                      {t('tabs.experience')}
                     </TabsTrigger>
                   </TabsList>
                   
@@ -138,7 +149,7 @@ const About = () => {
                     >
                       <div className="prose prose-gray dark:prose-invert max-w-none">
                         <p className="text-lg leading-relaxed text-muted-foreground">
-                          {t('about.description')}
+                          {t('description')}
                         </p>
                       </div>
                       
@@ -185,7 +196,7 @@ const About = () => {
                           <Code className="w-10 h-10 text-primary" />
                         </motion.div>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                          {t('about.skillsIntegrated')}
+                          {t('skillsIntegrated')}
                         </p>
                         <motion.p 
                           className="text-sm text-primary mt-4 font-medium"
@@ -224,14 +235,14 @@ const About = () => {
                           <div className="flex items-center gap-2 mb-2">
                             <Calendar className="w-4 h-4 text-primary" />
                             <span className="text-primary font-medium text-sm">
-                              {t('about.experience.period')}
+                              {t('experience.period')}
                             </span>
                           </div>
                           <h3 className="text-xl font-bold text-foreground mb-3">
-                            {t('about.experience.title')}
+                            {t('experience.title')}
                           </h3>
                           <p className="text-muted-foreground leading-relaxed">
-                            {t('about.experience.description')}
+                            {t('experience.description')}
                           </p>
                         </div>
                       </motion.div>

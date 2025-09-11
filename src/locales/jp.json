@@ -17,43 +17,34 @@
     "resume": "履歴書",
     "discoverMore": "もっと見る"
   },
-  "about": {
-    "title": "私について",
-    "subtitle": "東京出身の情熱的な開発者",
-    "description": "東京を拠点とする情熱的なウェブ開発者として、美しく機能的なデジタル体験の創造に専念しています。創造性と技術的専門知識を組み合わせ、ユーザーのニーズとビジネス目標の両方を満たすモダンでレスポンシブなウェブサイトを構築しています。クリーンで効率的なコードとユーザー中心のデザインに重点を置き、React、TypeScript、モダンなCSSフレームワークなどの最新のウェブ技術を活用して高品質なソリューションを提供しています。",
-    "bio": {
-      "title": "基本情報",
-      "description": "違いを生むデジタル体験の創造に情熱を注いでいます。",
-      "location": "場所",
-      "status": "ステータス",
-      "available": "お仕事募集中"
-    },
-    "skillsIntegrated": "スキルセクションはメインポートフォリオに統合されています",
-    "stats": {
-      "name": "名前",
-      "email": "メール",
-      "location": "所在地",
-      "experience": "経験",
-      "availability": "稼働状況",
-      "availabilityValue": "お仕事をお受けできます",
-      "languages": "言語",
-      "languagesValue": "英語（流暢）、ネパール語（母国語）、日本語（会話レベル）",
-      "projectsCompleted": "完成プロジェクト",
-      "yearsExperience": "学習年数",
-      "happyClients": "満足したクライアント",
-      "linesOfCode": "コード行数"
-    },
-    "tabs": {
-      "about": "私について",
-      "skills": "スキル",
-      "experience": "経験",
-      "education": "教育"
-    },
-    "experience": {
-      "title": "ジュニアウェブ開発者",
-      "period": "初めての職業的役割（2023年 - 現在）",
-      "description": "ウェブアプリケーションの開発、モダンなフロントエンド技術の学習、そしてウェブ開発における実践的な経験を積んでいます。"
-    }
+  "title": "私について",
+  "subtitle": "東京出身の情熱的な開発者",
+  "description": "東京を拠点とする情熱的なウェブ開発者として、美しく機能的なデジタル体験の創造に専念しています。創造性と技術的専門知識を組み合わせ、ユーザーのニーズとビジネス目標の両方を満たすモダンでレスポンシブなウェブサイトを構築しています。クリーンで効率的なコードとユーザー中心のデザインに重点を置き、React、TypeScript、モダンなCSSフレームワークなどの最新のウェブ技術を活用して高品質なソリューションを提供しています。",
+  "skillsIntegrated": "スキルセクションはメインポートフォリオに統合されています",
+  "stats": {
+    "name": "名前",
+    "email": "メール",
+    "location": "所在地",
+    "experience": "経験",
+    "availability": "稼働状況",
+    "availabilityValue": "お仕事をお受けできます",
+    "languages": "言語",
+    "languagesValue": "英語（流暢）、ネパール語（母国語）、日本語（会話レベル）",
+    "projectsCompleted": "完成プロジェクト",
+    "yearsExperience": "学習年数",
+    "happyClients": "満足したクライアント",
+    "linesOfCode": "コード行数"
+  },
+  "tabs": {
+    "about": "私について",
+    "skills": "スキル",
+    "experience": "経験",
+    "education": "教育"
+  },
+  "experience": {
+    "title": "ジュニアウェブ開発者",
+    "period": "初めての職業的役割（2023年 - 現在）",
+    "description": "ウェブアプリケーションの開発、モダンなフロントエンド技術の学習、そしてウェブ開発における実践的な経験を積んでいます。"
   },
   "skills": {
     "title": "スキルと専門知識",

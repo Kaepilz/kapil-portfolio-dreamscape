@@ -57,11 +57,18 @@ const technicalSkills = [
     description: "Utility-first CSS framework"
   },
   { 
-    name: "Firebase", 
+    name: "Next.js", 
+    level: 40, 
+    color: "#000000",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    description: "React production framework"
+  },
+  { 
+    name: "Supabase", 
     level: 50, 
-    color: "#FFCA28",
-    logo: "/icons/firebase.svg",
-    description: "Backend as a Service"
+    color: "#3ECF8E",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
+    description: "Open source Firebase alternative"
   },
 ];
 

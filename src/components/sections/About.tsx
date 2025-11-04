@@ -85,7 +85,7 @@ const About = () => {
                   >
                     <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
                     <div>
-                      <span className="font-medium text-foreground">{t('stats.location')}</span>
+                      <span className="font-medium text-foreground">Location</span>
                       <p className="text-muted-foreground">Tokyo, Japan</p>
                     </div>
                   </motion.div>
@@ -131,13 +131,13 @@ const About = () => {
                 <Tabs defaultValue="about" value={activeTab} onValueChange={setActiveTab}>
                   <TabsList className="grid grid-cols-3 mb-8 bg-muted/50">
                     <TabsTrigger value="about" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                      {t('tabs.about')}
+                      About Me
                     </TabsTrigger>
                     <TabsTrigger value="skills" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                      {t('tabs.skills')}
+                      Skills
                     </TabsTrigger>
                     <TabsTrigger value="experience" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                      {t('tabs.experience')}
+                      Experience
                     </TabsTrigger>
                   </TabsList>
                   
@@ -235,14 +235,14 @@ const About = () => {
                           <div className="flex items-center gap-2 mb-2">
                             <Calendar className="w-4 h-4 text-primary" />
                             <span className="text-primary font-medium text-sm">
-                              {t('experience.period')}
+                              1 and half year of experience
                             </span>
                           </div>
                           <h3 className="text-xl font-bold text-foreground mb-3">
-                            {t('experience.title')}
+                            Junior Web Developer
                           </h3>
                           <p className="text-muted-foreground leading-relaxed">
-                            {t('experience.description')}
+                            Developing web applications, learning modern frontend technologies, and gaining hands-on experience in web development with React, TypeScript, and modern frameworks.
                           </p>
                         </div>
                       </motion.div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Phone, MapPin, Github, Linkedin, Instagram, User, Star, MessageSquare } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, Github, Linkedin, Facebook, User, Star, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -210,7 +210,7 @@ export const UnifiedContact = () => {
   const socialLinks = [
     { icon: Github, href: "https://github.com/Kaepilz", label: "GitHub" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/kapil-niure", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" }
+    { icon: Facebook, href: "https://www.facebook.com/niure.kapil", label: "Facebook" }
   ];
 
   return (

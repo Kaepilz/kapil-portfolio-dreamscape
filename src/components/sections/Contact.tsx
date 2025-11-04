@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Send, Github, Twitter, Linkedin, Instagram, Download } from "lucide-react";
+import { MapPin, Phone, Mail, Send, Github, Twitter, Linkedin, Facebook, Download } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -160,9 +160,8 @@ const Contact = () => {
                   <div className="flex space-x-4">
                     {[
                       { icon: Github, href: "https://github.com/Kaepilz", label: "GitHub" },
-                      { icon: Twitter, href: "#", label: "Twitter" },
                       { icon: Linkedin, href: "https://www.linkedin.com/in/kapil-niure", label: "LinkedIn" },
-                      { icon: Instagram, href: "#", label: "Instagram" }
+                      { icon: Facebook, href: "https://www.facebook.com/niure.kapil", label: "Facebook" }
                     ].map((social, index) => (
                       <motion.a
                         key={social.label}

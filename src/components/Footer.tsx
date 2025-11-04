@@ -1,5 +1,5 @@
 
-import { Github, Twitter, Linkedin, Instagram, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Facebook, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -38,6 +38,15 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Linkedin className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.facebook.com/niure.kapil" 
+              className="text-muted-foreground hover:text-kapil-red transition-colors"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook className="w-5 h-5" />
             </a>
             <a 
               href="mailto:kapilniure4@gmail.com" 

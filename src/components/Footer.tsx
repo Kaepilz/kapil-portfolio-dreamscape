@@ -22,7 +22,7 @@ const Footer = () => {
           
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a 
-              href="https://github.com/Kaepilz" 
+              href="https://github.com/Kaepilz"
               className="text-muted-foreground hover:text-kapil-red transition-colors"
               aria-label="GitHub"
               target="_blank"

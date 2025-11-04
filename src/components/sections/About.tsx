@@ -73,7 +73,7 @@ const About = () => {
                       <span className="text-xs font-bold text-primary">K</span>
                     </div>
                     <div>
-                      <span className="font-medium text-foreground">{t('stats.name')}</span>
+                      <span className="font-medium text-foreground">Name</span>
                       <p className="text-muted-foreground">Kapil Niure</p>
                     </div>
                   </motion.div>
@@ -97,7 +97,7 @@ const About = () => {
                   >
                     <div className="w-4 h-4 rounded-full bg-blue-500 flex-shrink-0" />
                     <div>
-                      <span className="font-medium text-foreground">{t('stats.languages')}</span>
+                      <span className="font-medium text-foreground">Language</span>
                       <p className="text-muted-foreground text-xs">{t('stats.languagesValue')}</p>
                     </div>
                   </motion.div>
@@ -109,7 +109,7 @@ const About = () => {
                   >
                     <Code className="w-4 h-4 text-green-500 flex-shrink-0" />
                     <div>
-                      <span className="font-medium text-foreground">{t('stats.availability')}</span>
+                      <span className="font-medium text-foreground">Availability</span>
                       <p className="text-green-600 dark:text-green-400 font-medium">{t('stats.availabilityValue')}</p>
                     </div>
                   </motion.div>

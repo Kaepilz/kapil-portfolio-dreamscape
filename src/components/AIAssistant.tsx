@@ -41,8 +41,8 @@ const KAPIL_INFO = {
     { name: "Portfolio Website Template", description: "Customizable portfolio template for creatives" }
   ],
   socialLinks: {
-    github: "https://github.com/Kapilz",
-    linkedin: "https://www.linkedin.com/in/kapil-niure/?originalSubdomain=jp",
+    github: "https://github.com/Kaepilz",
+    linkedin: "https://www.linkedin.com/in/kapil-niure",
     facebook: "https://www.facebook.com/niure.kapil"
   }
 };

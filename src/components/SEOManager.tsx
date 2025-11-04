@@ -34,8 +34,8 @@ export const SEOManager: React.FC<SEOProps> = ({
     "url": url,
     "image": image,
     "sameAs": [
-      "https://github.com/Kapilz",
-      "https://www.linkedin.com/in/kapil-niure/?originalSubdomain=jp",
+      "https://github.com/Kaepilz",
+      "https://www.linkedin.com/in/kapil-niure",
       "https://www.facebook.com/niure.kapil"
     ],
     "address": {

@@ -44,13 +44,13 @@ export const EnhancedContact = () => {
     {
       name: "GitHub",
       icon: <Github className="w-6 h-6" />,
-      href: "https://github.com/Kapilz",
+      href: "https://github.com/Kaepilz",
       color: "#333"
     },
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-6 h-6" />,
-      href: "https://www.linkedin.com/in/kapil-niure/?originalSubdomain=jp",
+      href: "https://www.linkedin.com/in/kapil-niure",
       color: "#0077B5"
     },
     {
